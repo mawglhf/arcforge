@@ -139,7 +139,7 @@
   "settings.itemSizeHelp": "Controla o tamanho com que cada carta de item aparece na grade.",
   "settings.displayPriceHelp": "Mostra o preço de venda em cada carta de item quando disponível.",
   "settings.displayWeightHelp": "Mostra o peso do item em cada carta quando disponível.",
-  "settings.showTrackIconsHelp": "Mostra pequenos ícones de acompanhar/parar de acompanhar diretamente nas cartas de item.",
+  "settings.showTrackIconsHelp": "Mostra pequenos ícones de favoritar/desfavoritar diretamente nas cartas de item.",
   "settings.openCraftingGraphOnClickHelp": "Ao clicar em uma carta de item, o gráfico de criação desse item é aberto diretamente.",
   "settings.lightweightModeHelp": "Desativa alguns efeitos visuais para melhorar o desempenho em dispositivos mais fracos.",
   "settings.showSpecialIcons": "Mostrar ícones especiais",
@@ -164,6 +164,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "Gráfico de criação",
   "item.craftingTable": "Tabela de fabricação",
+  "item.graph": "Gráfico",
+  "item.table": "Tabela",
   "item.notAvailable": "N/D",
 
   "grid.noItemsFound": "Nenhum item encontrado",
@@ -221,5 +223,15 @@
   "track.clearAll": "Limpar tudo",
   "track.clearAllTitle": "Limpar todos os itens acompanhados",
   "track.noItemsYet": "Nenhum item está sendo acompanhado ainda.",
-  "track.openTrackedItems": "Abrir itens acompanhados"
+  "track.openTrackedItems": "Abrir itens acompanhados",
+
+  "favorite.favorite": "Favoritar",
+  "favorite.unfavorite": "Desfavoritar",
+  "favorite.showFavoriteIcons": "Clique para favoritar",
+  "favorite.favoriteItems": "Itens favoritos",
+  "favorite.clickToNavigate": "Clique em um item para ir aos detalhes",
+  "favorite.clearAll": "Limpar tudo",
+  "favorite.clearAllTitle": "Limpar todos os itens favoritos",
+  "favorite.noItemsYet": "Nenhum item favorito ainda.",
+  "favorite.openFavoriteItems": "Abrir itens favoritos"
 }

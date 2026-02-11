@@ -3,7 +3,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Item } from "../../types/item";
 import {
-  faEye,
+  faHeart,
   faWrench,
   faRocket,
   faScroll,
@@ -100,7 +100,7 @@ export default function TrackedItemsPanel({
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 flex items-center gap-3">
-              {t("track.trackedItems")}
+              {t("favorite.favoriteItems")}
             </h2>
             <div className="flex">
               <button
@@ -114,9 +114,9 @@ export default function TrackedItemsPanel({
                   } catch {}
                 }}
                 className="flex items-center justify-center px-4 py-2 rounded-lg bg-red-500/30 text-red-200 font-semibold hover:bg-red-500/50 hover:text-white transition-all mr-4"
-                title={t("track.clearAllTitle")}
+                title={t("favorite.clearAllTitle")}
               >
-                {t("track.clearAll")}
+                {t("favorite.clearAll")}
               </button>
               <button
                 onClick={onClose}
@@ -204,22 +204,26 @@ export default function TrackedItemsPanel({
                             </div>
                           )}
                         </div>
-                        {/* Item Tracking toggle */}
+                        {/* Item Favorite toggle */}
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
                             onItemTracked(item.name);
                           }}
-                          title={isTrackedFunc(item.name) ? t("track.untrack") : t("track.track")}
+                          title={
+                            isTrackedFunc(item.name)
+                              ? t("favorite.unfavorite")
+                              : t("favorite.favorite")
+                          }
                           className={`absolute top-2 left-2 z-20 w-8 h-8 rounded-md flex items-center justify-center text-sm ${
                             isTrackedFunc(item.name)
-                              ? "bg-yellow-400 text-black"
+                              ? "bg-red-500 text-white"
                               : "bg-black/40 text-gray-300"
                           }`}
                           style={{ cursor: "pointer" }}
                         >
                           <FontAwesomeIcon
-                            icon={faEye}
+                            icon={faHeart}
                             className="text-white text-xl relative z-10 drop-shadow-lg"
                           />
                         </button>
@@ -337,7 +341,7 @@ export default function TrackedItemsPanel({
               </div>
             ) : (
               <div className="flex items-center justify-center h-[55vh]">
-                <div className="text-center text-gray-400 text-lg">{t("track.noItemsYet")}</div>
+                <div className="text-center text-gray-400 text-lg">{t("favorite.noItemsYet")}</div>
               </div>
             )}
           </div>

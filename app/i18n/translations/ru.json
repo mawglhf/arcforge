@@ -158,6 +158,8 @@
   "item.wiki": "Вики",
   "item.craftingGraph": "Граф крафта",
   "item.craftingTable": "Таблица крафта",
+  "item.graph": "Граф",
+  "item.table": "Таблица",
   "item.notAvailable": "Н/Д",
 
   "grid.noItemsFound": "Предметы не найдены",
@@ -215,5 +217,15 @@
   "track.clearAll": "Очистить все",
   "track.clearAllTitle": "Очистить все отслеживаемые предметы",
   "track.noItemsYet": "Пока нет отслеживаемых предметов.",
-  "track.openTrackedItems": "Открыть отслеживаемые предметы"
+  "track.openTrackedItems": "Открыть отслеживаемые предметы",
+
+  "favorite.favorite": "Избранное",
+  "favorite.unfavorite": "Убрать из избранного",
+  "favorite.showFavoriteIcons": "Нажмите для избранного",
+  "favorite.favoriteItems": "Избранные предметы",
+  "favorite.clickToNavigate": "Нажмите на предмет, чтобы перейти к деталям",
+  "favorite.clearAll": "Очистить все",
+  "favorite.clearAllTitle": "Очистить все избранные предметы",
+  "favorite.noItemsYet": "Пока нет избранных предметов.",
+  "favorite.openFavoriteItems": "Открыть избранные предметы"
 }

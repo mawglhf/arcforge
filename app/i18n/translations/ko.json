@@ -164,6 +164,8 @@
   "item.wiki": "위키",
   "item.craftingGraph": "제작 그래프",
   "item.craftingTable": "제작 표",
+  "item.graph": "그래프",
+  "item.table": "표",
   "item.notAvailable": "N/A",
 
   "grid.noItemsFound": "아이템을 찾을 수 없습니다",
@@ -221,5 +223,15 @@
   "track.clearAll": "전체 삭제",
   "track.clearAllTitle": "모든 추적 아이템 삭제",
   "track.noItemsYet": "아직 추적 중인 아이템이 없습니다.",
-  "track.openTrackedItems": "추적 아이템 열기"
+  "track.openTrackedItems": "추적 아이템 열기",
+
+  "favorite.favorite": "즐겨찾기",
+  "favorite.unfavorite": "즐겨찾기 해제",
+  "favorite.showFavoriteIcons": "클릭하여 즐겨찾기",
+  "favorite.favoriteItems": "즐겨찾기 아이템",
+  "favorite.clickToNavigate": "아이템을 클릭하면 상세 페이지로 이동합니다",
+  "favorite.clearAll": "전체 삭제",
+  "favorite.clearAllTitle": "모든 즐겨찾기 아이템 삭제",
+  "favorite.noItemsYet": "아직 즐겨찾기 아이템이 없습니다.",
+  "favorite.openFavoriteItems": "즐겨찾기 아이템 열기"
 }

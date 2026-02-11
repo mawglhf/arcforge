@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faCog, faEye } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCog, faHeart } from "@fortawesome/free-solid-svg-icons";
 import itemsData from "../data/items_database.json";
 import StructuredData from "./components/StructuredData";
 import Header from "./components/Header";
@@ -529,29 +529,29 @@ function HomeContent() {
             />
           </button>
 
-          {/* Mobile Tracked supplies button */}
+          {/* Mobile Favorite items button */}
           <button
             onClick={() => setIsTrackedOpen(true)}
-            className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
-            aria-label={t("track.openTrackedItems")}
+            className="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-red-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-red-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-red-500/50 hover:scale-105"
+            aria-label={t("favorite.openFavoriteItems")}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
             <FontAwesomeIcon
-              icon={faEye}
+              icon={faHeart}
               className="text-white text-xl relative z-10 drop-shadow-lg"
             />
           </button>
         </div>
 
-        {/* Desktop tracked supplies button */}
+        {/* Desktop favorite items button */}
         <button
           onClick={() => setIsTrackedOpen(true)}
-          className="hidden lg:flex fixed bottom-25 right-8 z-30 w-14 h-14 items-center justify-center bg-gradient-to-br from-blue-500/30 to-purple-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-blue-500/40 hover:to-purple-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-blue-500/50 hover:scale-105"
-          aria-label={t("track.openTrackedItems")}
+          className="hidden lg:flex fixed bottom-25 right-8 z-30 w-14 h-14 items-center justify-center bg-gradient-to-br from-red-500/30 to-pink-500/20 backdrop-blur-xl rounded-full shadow-2xl hover:from-red-500/40 hover:to-pink-500/30 transition-all duration-300 border border-white/20 hover:border-white/30 hover:shadow-red-500/50 hover:scale-105"
+          aria-label={t("favorite.openFavoriteItems")}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-full pointer-events-none"></div>
           <FontAwesomeIcon
-            icon={faEye}
+            icon={faHeart}
             className="text-white text-xl relative z-10 drop-shadow-lg"
           />
         </button>

@@ -351,5 +351,26 @@
 
   "Firecracker": "Feuerwerk",
   "Fireworks Box": "Feuerwerk-Kiste",
-  "Candleberries": "Kerzenbeeren"
+  "Candleberries": "Kerzenbeeren",
+
+  "Snowball": "Schneeball",
+  "Acoustic Guitar": "Akustikgitarre",
+  "Ancient Fort Security Code": "Sicherheitscode Alte Festung",
+  "Pilgrim's Peak Security Code": "Sicherheitscode Pilgergipfel",
+  "Raider's Refuge Security Code": "Sicherheitscode Räuberzuflucht",
+  "Reinforced Reception Security Code": "Sicherheitscode Verstärkter Empfang",
+  "Fossilized Lightning": "Versteinerter Blitz",
+  "Burnt-Out Candles": "Ausgebrannte Kerzen",
+  "Tropical Duck": "Tropische Ente",
+  "Gentle Duck": "Sanfte Ente",
+  "Flashy Duck": "Auffällige Ente",
+  "Familiar Duck": "Vertraute Ente",
+  "Doodly Duck": "Gekritzel-Ente",
+  "Alien Duck": "Außerirdische Ente",
+  "Shredder Gyro": "Schredder-Gyro",
+  "Shaker": "Schüttler",
+  "Damaged Leaper Pulse Unit": "Beschädigte Springer-Pulseinheit",
+  "Flow Controller": "Durchflussregler",
+  "Integrated Defibrillator": "Integrierter Defibrillator",
+  "Looting Mk. 3 (Safekeeper)": "Plünderung Mk. 3 (Safekeeper)"
 }

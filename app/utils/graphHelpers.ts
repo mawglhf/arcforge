@@ -1,18 +1,18 @@
-import { Edge, ItemData } from '../types/graph';
+import { Edge, ItemData } from "../types/graph";
 
 // Edge type priority order (lower number = higher priority)
 const EDGE_TYPE_PRIORITY: { [key: string]: number } = {
-  'craft': 0,
-  'repair': 1,
-  'upgrade': 2,
-  'recycle': 3,
-  'salvage': 4,
-  'trade': 5,
+  craft: 0,
+  repair: 1,
+  upgrade: 2,
+  recycle: 3,
+  salvage: 4,
+  trade: 5,
 };
 
 // Helper function to clean relation names
 export const cleanRelationName = (relation: string): string => {
-  return relation.replace(/_from$|_to$/g, '');
+  return relation.replace(/_from$|_to$/g, "");
 };
 
 // Helper function to get edge type priority
@@ -24,56 +24,54 @@ export const getEdgePriority = (edge: Edge): number => {
 // Helper function to format edge label with level, quantity, and price
 // Now accepts an optional translation function for relation names
 export const formatEdgeLabel = (
-  edge: Edge, 
+  edge: Edge,
   translateRelation?: (key: string) => string,
-  translateItem?: (name: string) => string
+  translateItem?: (name: string) => string,
 ): string => {
   let relation = cleanRelationName(edge.relation);
-  
+
   // Rename trader/sold_by to trade for display
-  if (relation === 'trader' || relation === 'sold_by') {
-    relation = 'trade';
+  if (relation === "trader" || relation === "sold_by") {
+    relation = "trade";
   }
-  
+
   // Translate relation if translation function provided
-  const translatedRelation = translateRelation 
-    ? translateRelation(`graph.${relation}`) 
-    : relation;
-  
-  const quantity = edge.quantity ? `${edge.quantity}x` : '';
-  const levelInfo = edge.input_level || edge.output_level || '';
-  
+  const translatedRelation = translateRelation ? translateRelation(`graph.${relation}`) : relation;
+
+  const quantity = edge.quantity ? `${edge.quantity}x` : "";
+  const levelInfo = edge.input_level || edge.output_level || "";
+
   // Extract price info from dependency for trader edges
-  let priceInfo = '';
-  if (edge.relation === 'trader' || edge.relation === 'sold_by') {
-    const priceDep = edge.dependency?.find(d => d.type === 'price');
+  let priceInfo = "";
+  if (edge.relation === "trader" || edge.relation === "sold_by") {
+    const priceDep = edge.dependency?.find((d) => d.type === "price");
     if (priceDep) {
       const amount = priceDep.amount;
       const currency = priceDep.currency;
       priceInfo = `${amount} ${currency}`;
     }
   }
-  
+
   // For recycle/salvage with level info, translate the source item name
   let levelDisplay = levelInfo;
   if (levelInfo && translateItem) {
     levelDisplay = translateItem(levelInfo);
   }
-  
+
   // Build label
   const parts = [translatedRelation];
   if (quantity) parts.push(`(${quantity})`);
   if (priceInfo) parts.push(`[${priceInfo}]`);
   else if (levelDisplay) parts.push(`[${levelDisplay}]`);
-  
-  return parts.join(' ');
+
+  return parts.join(" ");
 };
 
 // Shape of elements we build for Cytoscape
 interface GraphElementData {
   id?: string;
   label?: string;
-  type?: 'center' | 'input' | 'output';
+  type?: "center" | "input" | "output";
   nodeType?: string;
   rarity?: string;
   imageUrl?: string;
@@ -82,6 +80,7 @@ interface GraphElementData {
   target?: string;
   relation?: string;
   curvature?: number;
+  isMissing?: boolean;
 }
 
 interface GraphElement {
@@ -95,63 +94,63 @@ export const buildGraphElements = (
   itemsLookup: Map<string, ItemData>,
   selectedEdgeTypes?: Set<string>,
   translateItem?: (name: string) => string,
-  translateRelation?: (key: string) => string
+  translateRelation?: (key: string) => string,
 ) => {
   const elements: GraphElement[] = [];
   const CURVATURE = 90;
-  
+
   // Helper to translate item name
-  const tItem = (name: string) => translateItem ? translateItem(name) : name;
-  
+  const tItem = (name: string) => (translateItem ? translateItem(name) : name);
+
   // Helper to check if an edge should be included
   const shouldIncludeEdge = (relation: string): boolean => {
     if (!selectedEdgeTypes) {
       return true; // If no filter set provided, show all
     }
-    
+
     if (selectedEdgeTypes.size === 0) {
       return false; // If explicitly no filters selected, show no edges (only center node)
     }
-    
+
     // Check if the relation matches any selected type
     // Relations can be: craft_from, craft_to, recycle_from, etc.
     const cleanedRelation = cleanRelationName(relation);
-    
+
     // Map both 'trader' and 'sold_by' to the 'trade' filter
-    if (cleanedRelation === 'trader' || cleanedRelation === 'sold_by') {
-      return selectedEdgeTypes.has('trade');
+    if (cleanedRelation === "trader" || cleanedRelation === "sold_by") {
+      return selectedEdgeTypes.has("trade");
     }
-    
+
     return selectedEdgeTypes.has(cleanedRelation);
   };
-  
+
   // Center node - Selected item
   const centerId = `center-${currentItem.name}`;
-  const centerImageUrl = currentItem.image_urls?.thumb 
+  const centerImageUrl = currentItem.image_urls?.thumb
     ? `/api/proxy-image?url=${encodeURIComponent(currentItem.image_urls.thumb)}`
-    : '';
+    : "";
   elements.push({
     data: {
       id: centerId,
       label: tItem(currentItem.name),
-      type: 'center',
-      nodeType: currentItem.node_type || 'item',
+      type: "center",
+      nodeType: currentItem.node_type || "item",
       rarity: currentItem.infobox?.rarity,
       imageUrl: centerImageUrl,
-    }
+    },
   });
 
   // Group edges by item name and direction, filtering by selected edge types
   const leftGrouped = new Map<string, Edge[]>();
   const rightGrouped = new Map<string, Edge[]>();
-  
-  currentItem.edges.forEach(edge => {
+
+  currentItem.edges.forEach((edge) => {
     // Skip edges that don't match the filter
     if (!shouldIncludeEdge(edge.relation)) {
       return;
     }
-    
-    if (edge.direction === 'in') {
+
+    if (edge.direction === "in") {
       if (!leftGrouped.has(edge.name)) {
         leftGrouped.set(edge.name, []);
       }
@@ -171,7 +170,7 @@ export const buildGraphElements = (
   rightGrouped.forEach((edges) => {
     edges.sort((a, b) => getEdgePriority(a) - getEdgePriority(b));
   });
-  
+
   // Sort groups by the priority of their primary (first) edge type
   const sortedLeftEntries = Array.from(leftGrouped.entries()).sort((a, b) => {
     return getEdgePriority(a[1][0]) - getEdgePriority(b[1][0]);
@@ -179,48 +178,60 @@ export const buildGraphElements = (
   const sortedRightEntries = Array.from(rightGrouped.entries()).sort((a, b) => {
     return getEdgePriority(a[1][0]) - getEdgePriority(b[1][0]);
   });
-  
+
   // Create left nodes (inputs)
   let leftIdx = 0;
   const totalLeftNodes = sortedLeftEntries.length;
   const leftIsEven = totalLeftNodes % 2 === 0;
   const leftMiddle = totalLeftNodes / 2;
-  
+
   sortedLeftEntries.forEach(([itemName, edges]) => {
     const nodeId = `left-${itemName}`;
     const relatedItem = itemsLookup.get(itemName);
-    const imageUrl = relatedItem?.image_urls?.thumb 
+    const imageUrl = relatedItem?.image_urls?.thumb
       ? `/api/proxy-image?url=${encodeURIComponent(relatedItem.image_urls.thumb)}`
-      : '';
-    
+      : "";
+
+    // Determine if this is a missing item (not in lookup)
+    const isMissing = !relatedItem;
+
     elements.push({
       data: {
         id: nodeId,
         label: tItem(itemName),
-        type: 'input',
-        nodeType: relatedItem?.node_type || 'item',
-        rarity: relatedItem?.infobox?.rarity,
+        type: "input",
+        nodeType: relatedItem?.node_type || "item",
+        rarity: isMissing ? "missing" : relatedItem?.infobox?.rarity || "Common",
         imageUrl: imageUrl,
         itemName: itemName, // Keep original name for navigation
-      }
+        isMissing: isMissing,
+      },
     });
 
     // Create edge from left to center with combined labels
-    const edgeLabels = edges.map(e => formatEdgeLabel(e, translateRelation, translateItem)).join('\n');
-    
+    const edgeLabels = edges
+      .map((e) => formatEdgeLabel(e, translateRelation, translateItem))
+      .join("\n");
+
     // Calculate curvature
-    const curvature = leftIsEven 
-      ? (leftIdx < leftMiddle ? -CURVATURE : CURVATURE)
-      : (leftIdx < Math.floor(leftMiddle) ? -CURVATURE : leftIdx > Math.floor(leftMiddle) ? CURVATURE : 0);
-    
+    const curvature = leftIsEven
+      ? leftIdx < leftMiddle
+        ? -CURVATURE
+        : CURVATURE
+      : leftIdx < Math.floor(leftMiddle)
+        ? -CURVATURE
+        : leftIdx > Math.floor(leftMiddle)
+          ? CURVATURE
+          : 0;
+
     elements.push({
       data: {
         source: nodeId,
         target: centerId,
         label: edgeLabels,
-        relation: edges.map(e => cleanRelationName(e.relation)).join(','),
+        relation: edges.map((e) => cleanRelationName(e.relation)).join(","),
         curvature: curvature,
-      }
+      },
     });
     leftIdx++;
   });
@@ -230,90 +241,106 @@ export const buildGraphElements = (
   const totalRightNodes = sortedRightEntries.length;
   const rightIsEven = totalRightNodes % 2 === 0;
   const rightMiddle = totalRightNodes / 2;
-  
+
   sortedRightEntries.forEach(([itemName, edges]) => {
     const nodeId = `right-${itemName}`;
     const relatedItem = itemsLookup.get(itemName);
-    const imageUrl = relatedItem?.image_urls?.thumb 
+    const imageUrl = relatedItem?.image_urls?.thumb
       ? `/api/proxy-image?url=${encodeURIComponent(relatedItem.image_urls.thumb)}`
-      : '';
-    
+      : "";
+
+    // Determine if this is a missing item (not in lookup)
+    const isMissing = !relatedItem;
+
     elements.push({
       data: {
         id: nodeId,
         label: tItem(itemName),
-        type: 'output',
-        nodeType: relatedItem?.node_type || 'item',
-        rarity: relatedItem?.infobox?.rarity,
+        type: "output",
+        nodeType: relatedItem?.node_type || "item",
+        rarity: isMissing ? "missing" : relatedItem?.infobox?.rarity || "Common",
         imageUrl: imageUrl,
         itemName: itemName, // Keep original name for navigation
-      }
+        isMissing: isMissing,
+      },
     });
 
     // Create edge from center to right with combined labels
-    const edgeLabels = edges.map(e => formatEdgeLabel(e, translateRelation, translateItem)).join('\n');
-    
+    const edgeLabels = edges
+      .map((e) => formatEdgeLabel(e, translateRelation, translateItem))
+      .join("\n");
+
     // Calculate curvature
-    const curvature = rightIsEven 
-      ? (rightIdx < rightMiddle ? CURVATURE : -CURVATURE)
-      : (rightIdx < Math.floor(rightMiddle) ? CURVATURE : rightIdx > Math.floor(rightMiddle) ? -CURVATURE : 0);
-    
+    const curvature = rightIsEven
+      ? rightIdx < rightMiddle
+        ? CURVATURE
+        : -CURVATURE
+      : rightIdx < Math.floor(rightMiddle)
+        ? CURVATURE
+        : rightIdx > Math.floor(rightMiddle)
+          ? -CURVATURE
+          : 0;
+
     elements.push({
       data: {
         source: centerId,
         target: nodeId,
         label: edgeLabels,
-        relation: edges.map(e => cleanRelationName(e.relation)).join(','),
+        relation: edges.map((e) => cleanRelationName(e.relation)).join(","),
         curvature: curvature,
-      }
+      },
     });
     rightIdx++;
   });
 
-  return { elements, leftGrouped: new Map(sortedLeftEntries), rightGrouped: new Map(sortedRightEntries) };
+  return {
+    elements,
+    leftGrouped: new Map(sortedLeftEntries),
+    rightGrouped: new Map(sortedRightEntries),
+  };
 };
 
 // Build layout positions function
 export const buildLayoutPositions = (
   elements: GraphElement[],
   leftGrouped: Map<string, Edge[]>,
-  rightGrouped: Map<string, Edge[]>
+  rightGrouped: Map<string, Edge[]>,
 ) => {
   return (node: { id: () => string; data: (key: string) => string }) => {
     const nodeId = node.id();
-    const nodeType = node.data('type');
-    
+    const nodeType = node.data("type");
+
     const leftX = 250;
     const centerX = 700;
     const rightX = 1150;
     const centerY = 400;
     const spacing = 180;
-    
+
     // Center node
-    if (nodeType === 'center') {
+    if (nodeType === "center") {
       return { x: centerX, y: centerY };
     }
-    
+
     // Left nodes (inputs)
-    if (nodeType === 'input') {
+    if (nodeType === "input") {
       const leftNodeIndex = elements
-        .filter(el => el.data?.type === 'input')
-        .findIndex(el => el.data?.id === nodeId);
+        .filter((el) => el.data?.type === "input")
+        .findIndex((el) => el.data?.id === nodeId);
       const totalLeftNodes = leftGrouped.size;
       const startY = centerY - ((totalLeftNodes - 1) * spacing) / 2;
       return { x: leftX, y: startY + leftNodeIndex * spacing };
     }
-    
+
     // Right nodes (outputs)
-    if (nodeType === 'output') {
+    if (nodeType === "output") {
       const rightNodeIndex = elements
-        .filter(el => el.data?.type === 'output')
-        .findIndex(el => el.data?.id === nodeId);
+        .filter((el) => el.data?.type === "output")
+        .findIndex((el) => el.data?.id === nodeId);
       const totalRightNodes = rightGrouped.size;
       const startY = centerY - ((totalRightNodes - 1) * spacing) / 2;
       return { x: rightX, y: startY + rightNodeIndex * spacing };
     }
-    
+
     return { x: 0, y: 0 };
   };
 };

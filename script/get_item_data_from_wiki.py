@@ -315,6 +315,91 @@ def parse_recipe_table(table_text: str, table_type: str) -> List[Dict[str, Any]]
     return recipes
 
 
+def parse_crafting_template(source_text: str) -> List[Dict[str, Any]]:
+    """Parse {{Crafting}} templates from MediaWiki source.
+    
+    Format:
+    {{Crafting
+     | ingredients = 5 Rubber Parts + 1 ARC Powercell
+     | station = Workbench 1, Medical Lab 1
+     | blueprint = n
+     | skill = In-Round Crafting (optional)
+    }}
+    """
+    recipes = []
+    
+    # Find all {{Crafting ... }} templates
+    # Use a more robust regex that handles nested braces and multiline
+    crafting_pattern = r'\{\{Crafting\s*\n(.*?)\}\}'
+    matches = re.findall(crafting_pattern, source_text, re.DOTALL | re.IGNORECASE)
+    
+    for match in matches:
+        recipe = {}
+        materials = []
+        
+        # Parse each parameter line
+        lines = match.split('\n')
+        for line in lines:
+            line = line.strip()
+            if not line.startswith('|'):
+                continue
+            
+            line = line[1:].strip()
+            if '=' not in line:
+                continue
+            
+            key, value = line.split('=', 1)
+            key = key.strip().lower()
+            value = value.strip()
+            
+            if not value:
+                continue
+            
+            if key == 'ingredients':
+                # Parse ingredients like "5 Rubber Parts + 1 ARC Powercell"
+                # Split by + and parse each part
+                parts = re.split(r'\s*\+\s*', value)
+                for part in parts:
+                    part = part.strip()
+                    # Try to match "quantity item_name" pattern
+                    match_qty = re.match(r'(\d+)\s+(.+)', part)
+                    if match_qty:
+                        materials.append({
+                            "quantity": int(match_qty.group(1)),
+                            "item": clean_text(match_qty.group(2))
+                        })
+                    elif part:
+                        # No quantity specified, assume 1
+                        materials.append({
+                            "quantity": 1,
+                            "item": clean_text(part)
+                        })
+            
+            elif key == 'station':
+                # Parse station like "Workbench 1, Medical Lab 1" or "Inventory"
+                # Take the first station as the primary workshop
+                stations = [s.strip() for s in value.split(',')]
+                if stations:
+                    recipe['workshop'] = stations[0]
+                    if len(stations) > 1:
+                        recipe['alt_workshops'] = stations[1:]
+            
+            elif key == 'blueprint':
+                # blueprint = y means blueprint locked, n means not
+                if value.lower() in ('y', 'yes', 'true', '1'):
+                    recipe['blueprint_locked'] = True
+            
+            elif key == 'skill':
+                # skill = In-Round Crafting means requires a skill
+                recipe['skill'] = clean_text(value)
+        
+        if materials:
+            recipe['recipe'] = materials
+            recipes.append(recipe)
+    
+    return recipes
+
+
 def parse_recycling_wiki_table(table_text: str) -> List[Dict[str, Any]]:
     """Parse a regular wiki table for recycling/salvaging materials."""
     # For simple tables without |- row separators, collect all cells in order
@@ -597,9 +682,21 @@ def parse_item_from_wiki(item_name: str, delay: float = 0.5, include_raw: bool =
         # Parse crafting section
         crafting_section = extract_section(source_text, 'Required Materials to Craft')
         if crafting_section:
+            # First try wiki table format
             recipes = parse_recipe_table(crafting_section, 'craft')
             if recipes:
                 item_data["crafting"] = recipes
+            else:
+                # Try {{Crafting}} template format
+                template_recipes = parse_crafting_template(crafting_section)
+                if template_recipes:
+                    item_data["crafting"] = template_recipes
+        
+        # Also check for {{Crafting}} templates outside of sections (some pages use them directly)
+        if "crafting" not in item_data:
+            template_recipes = parse_crafting_template(source_text)
+            if template_recipes:
+                item_data["crafting"] = template_recipes
         
         # Parse upgrade section (for weapons/augments)
         upgrade_section = extract_section(source_text, 'Required Materials to Upgrade')
@@ -798,16 +895,7 @@ if __name__ == "__main__":
     # =============================================================================
     ITEMS_TO_UPDATE = [
         # Add item names here to update them
-        # "Light Ammo",
-        # "Medium Ammo",
-        # "Heavy Ammo",
         # "Shotgun Ammo",
-        # "Launcher Ammo",
-        # "Energy Clip",
-        # "Ruined Augment"
-        # "Firecracker",
-        # "Fireworks Box",
-        "Candleberries"
     ]
     
     # Choose mode:

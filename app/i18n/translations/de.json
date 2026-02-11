@@ -139,7 +139,7 @@
   "settings.itemSizeHelp": "Steuert, wie groß jede Item-Karte im Raster angezeigt wird.",
   "settings.displayPriceHelp": "Zeigt den Verkaufspreis auf jeder Item-Karte an, sofern verfügbar.",
   "settings.displayWeightHelp": "Zeigt das Gewicht des Items auf jeder Karte an, sofern verfügbar.",
-  "settings.showTrackIconsHelp": "Zeigt kleine Verfolgen-/Nicht-mehr-verfolgen-Symbole direkt auf den Item-Karten.",
+  "settings.showTrackIconsHelp": "Zeigt kleine Favoriten-/Nicht-mehr-Favoriten-Symbole direkt auf den Item-Karten.",
   "settings.openCraftingGraphOnClickHelp": "Ein Klick auf eine Item-Karte öffnet direkt ihren Crafting-Grafen.",
   "settings.lightweightModeHelp": "Deaktiviert einige visuelle Effekte, um die Performance auf langsameren Geräten zu verbessern.",
   "settings.showSpecialIcons": "Spezial-Icons anzeigen",
@@ -164,6 +164,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "Crafting-Graf",
   "item.craftingTable": "Herstellungstabelle",
+  "item.graph": "Graf",
+  "item.table": "Tabelle",
   "item.notAvailable": "N/V",
 
   "grid.noItemsFound": "Keine Items gefunden",
@@ -221,5 +223,15 @@
   "track.clearAll": "Alle löschen",
   "track.clearAllTitle": "Alle verfolgten Items löschen",
   "track.noItemsYet": "Noch keine Items werden verfolgt.",
-  "track.openTrackedItems": "Verfolgte Items öffnen"
+  "track.openTrackedItems": "Verfolgte Items öffnen",
+
+  "favorite.favorite": "Favorit",
+  "favorite.unfavorite": "Nicht mehr Favorit",
+  "favorite.showFavoriteIcons": "Klicken für Favorit",
+  "favorite.favoriteItems": "Favoriten-Items",
+  "favorite.clickToNavigate": "Klicke auf ein Item, um zu den Details zu springen",
+  "favorite.clearAll": "Alle löschen",
+  "favorite.clearAllTitle": "Alle Favoriten-Items löschen",
+  "favorite.noItemsYet": "Noch keine Favoriten-Items.",
+  "favorite.openFavoriteItems": "Favoriten-Items öffnen"
 }

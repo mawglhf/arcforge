@@ -9,25 +9,26 @@ export const cytoscapeStyles = [
     selector: "node",
     style: {
       shape: "roundrectangle",
-      "background-fill": "linear-gradient",
-      "background-gradient-direction": "to-right",
-      "background-gradient-stop-colors": (ele: DataElement) => {
+      "background-color": (ele: DataElement) => {
         const rarity = ele.data("rarity") as string | undefined;
-        const gradientColors = {
-          Common: ["rgba(153,159,165,0.25)", "rgba(5,13,36,1)"],
-          Uncommon: ["rgba(86,203,134,0.25)", "rgba(5,13,36,1)"],
-          Rare: ["rgba(30,150,252,0.3)", "rgba(5,13,36,1)"],
-          Epic: ["rgba(216,41,155,0.25)", "rgba(5,13,36,1)"],
-          Legendary: ["rgba(251,199,0,0.25)", "rgba(5,13,36,1)"],
+        const bgColors: Record<string, string> = {
+          Common: "rgba(153,159,165,0.15)",
+          Uncommon: "rgba(86,203,134,0.15)",
+          Rare: "rgba(30,150,252,0.2)",
+          Epic: "rgba(216,41,155,0.15)",
+          Legendary: "rgba(251,199,0,0.15)",
+          missing: "rgba(100,100,100,0.1)",
         };
         if (!rarity) {
-          return gradientColors.Common;
+          return bgColors.Common;
         }
-        const key = rarity as keyof typeof gradientColors;
-        return gradientColors[key] ?? gradientColors.Common;
+        return bgColors[rarity] ?? bgColors.Common;
       },
-      "background-gradient-stop-positions": [0, 100],
-      "background-image": (ele: DataElement) => (ele.data("imageUrl") as string | undefined) || "",
+      "background-image": (ele: DataElement) => {
+        const imageUrl = ele.data("imageUrl") as string | undefined;
+        // Return "none" for empty/missing images to avoid Cytoscape warnings
+        return imageUrl && imageUrl.length > 0 ? imageUrl : "none";
+      },
       "background-fit": "contain",
       "background-clip": "none",
       "background-position-x": "50%",
@@ -47,6 +48,10 @@ export const cytoscapeStyles = [
         const rarity = ele.data("rarity") as string | undefined;
         if (!rarity) {
           return "#717471";
+        }
+        // Handle missing items with a distinct gray border
+        if (rarity === "missing") {
+          return "#555555";
         }
         const key = rarity as keyof typeof rarityColors;
         return rarityColors[key] ?? "#717471";
@@ -88,7 +93,7 @@ export const cytoscapeStyles = [
       "border-color": "#fbbf24",
       width: 120,
       height: 120,
-      "background-gradient-stop-colors": ["rgba(251,191,36,0.2)", "rgba(5,13,36,1)"],
+      "background-color": "rgba(251,191,36,0.15)",
     },
   },
   {
@@ -96,6 +101,15 @@ export const cytoscapeStyles = [
     style: {
       width: 160,
       height: 160,
+    },
+  },
+  // Style for missing items (not in database)
+  {
+    selector: 'node[isMissing="true"], node[rarity="missing"]',
+    style: {
+      "border-style": "dashed",
+      "border-color": "#555555",
+      opacity: 0.7,
     },
   },
   {

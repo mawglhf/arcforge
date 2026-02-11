@@ -7,7 +7,7 @@ import {
   faDiagramProject,
   faLocationDot,
   faQuoteLeft,
-  faEye,
+  faHeart,
   faWrench,
   faRocket,
   faScroll,
@@ -121,22 +121,20 @@ export default function ItemDetailPanel({
 
         <div className="relative z-10 p-5">
           <div className="absolute top-4 right-4 z-50 flex gap-4">
-            {/* Track Item Button */}
+            {/* Favorite Item Button */}
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 onItemTracked(item.name);
               }}
-              title={isTrackedFunc(item.name) ? t("track.untrack") : t("track.track")}
+              title={isTrackedFunc(item.name) ? t("favorite.unfavorite") : t("favorite.favorite")}
               className={`w-10 h-10 flex items-center justify-center rounded-md text-sm ${
-                isTrackedFunc(item.name)
-                  ? "bg-yellow-400 text-black"
-                  : "bg-black/40 text-purple-200"
+                isTrackedFunc(item.name) ? "bg-red-500 text-white" : "bg-black/40 text-purple-200"
               }`}
               style={{ cursor: "pointer" }}
             >
               <FontAwesomeIcon
-                icon={faEye}
+                icon={faHeart}
                 className="text-white text-xl relative z-10 drop-shadow-lg"
               />
             </button>
@@ -443,7 +441,8 @@ export default function ItemDetailPanel({
               <div className="absolute inset-0 bg-linear-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faDiagramProject} />
-                {t("item.craftingGraph")}
+                <span className="hidden md:inline">{t("item.craftingGraph")}</span>
+                <span className="md:hidden">{t("item.graph")}</span>
               </span>
             </a>
             <a
@@ -453,7 +452,8 @@ export default function ItemDetailPanel({
               <div className="absolute inset-0 bg-linear-to-r from-blue-400/0 via-blue-400/20 to-blue-400/0 -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               <span className="relative z-10 flex items-center justify-center gap-2">
                 <FontAwesomeIcon icon={faTableColumns} />
-                {t("item.craftingTable")}
+                <span className="hidden md:inline">{t("item.craftingTable")}</span>
+                <span className="md:hidden">{t("item.table")}</span>
               </span>
             </a>
           </div>

@@ -35,8 +35,8 @@ def clean_text(text: str) -> str:
 
 def extract_trader_image_from_source(source_text: str, trader_name: str) -> Optional[str]:
     """Extract trader image filename from MediaWiki source."""
-    # Look for [[File:Trader_...png|...]] pattern
-    pattern = r'\[\[File:(Trader_[^\]|]+\.png)'
+    # Look for [[File:Trader ...png|...]] pattern (space or underscore after Trader)
+    pattern = r'\[\[File:(Trader[ _][^\]|]+\.png)'
     match = re.search(pattern, source_text, re.IGNORECASE)
     
     if match:
@@ -53,11 +53,14 @@ def extract_image_url_from_wiki_page(wiki_url: str, image_filename: str) -> Opti
         
         soup = BeautifulSoup(response.content, 'html.parser')
         
+        # Normalize filename for matching (spaces to underscores)
+        normalized_filename = image_filename.replace(' ', '_')
+        
         # Find img tag with the specific filename in src or data-src
-        img_tag = soup.find('img', src=lambda x: x and image_filename.replace(' ', '_') in x)
+        img_tag = soup.find('img', src=lambda x: x and normalized_filename in x)
         
         if not img_tag:
-            # Try searching in all img tags
+            # Try searching in all img tags for Trader images
             for img in soup.find_all('img'):
                 src = img.get('src', '')
                 if 'Trader' in src and trader_name_match(src, image_filename):

@@ -139,7 +139,7 @@
   "settings.itemSizeHelp": "グリッド内で表示されるアイテムカードの大きさを調整します。",
   "settings.displayPriceHelp": "利用可能な場合、各アイテムカードに売却価格を表示します。",
   "settings.displayWeightHelp": "利用可能な場合、各アイテムカードに重量を表示します。",
-  "settings.showTrackIconsHelp": "アイテムカード上に小さな追跡/追跡解除アイコンを表示して素早く操作できます。",
+  "settings.showTrackIconsHelp": "アイテムカード上に小さなお気に入り/お気に入り解除アイコンを表示して素早く操作できます。",
   "settings.openCraftingGraphOnClickHelp": "アイテムカードをクリックすると、そのアイテムのクラフトグラフへ直接移動します。",
   "settings.lightweightModeHelp": "一部のビジュアル効果を無効にして、低スペック環境でのパフォーマンスを改善します。",
   "settings.showSpecialIcons": "特殊アイコンを表示",
@@ -164,6 +164,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "クラフトグラフ",
   "item.craftingTable": "クラフト表",
+  "item.graph": "グラフ",
+  "item.table": "表",
   "item.notAvailable": "N/A",
 
   "grid.noItemsFound": "アイテムが見つかりませんでした",
@@ -221,5 +223,15 @@
   "track.clearAll": "すべてクリア",
   "track.clearAllTitle": "追跡中のアイテムをすべてクリア",
   "track.noItemsYet": "まだ追跡中のアイテムはありません。",
-  "track.openTrackedItems": "追跡中のアイテムを開く"
+  "track.openTrackedItems": "追跡中のアイテムを開く",
+
+  "favorite.favorite": "お気に入り",
+  "favorite.unfavorite": "お気に入り解除",
+  "favorite.showFavoriteIcons": "クリックでお気に入り",
+  "favorite.favoriteItems": "お気に入りアイテム",
+  "favorite.clickToNavigate": "アイテムをクリックして詳細画面へ移動",
+  "favorite.clearAll": "すべてクリア",
+  "favorite.clearAllTitle": "お気に入りアイテムをすべてクリア",
+  "favorite.noItemsYet": "まだお気に入りアイテムはありません。",
+  "favorite.openFavoriteItems": "お気に入りアイテムを開く"
 }

@@ -3,6 +3,10 @@
     "name": "Celeste",
     "wiki_url": "https://arcraiders.wiki/wiki/Celeste",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Celeste&action=edit",
+    "image_filename": "Trader Celeste vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/3f/Trader_Celeste_vertical.png/220px-Trader_Celeste_vertical.png.webp"
+    },
     "shop": [
       {
         "name": "Chemicals",
@@ -189,6 +193,10 @@
     "name": "Shani",
     "wiki_url": "https://arcraiders.wiki/wiki/Shani",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Shani&action=edit",
+    "image_filename": "Trader Shani vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/4/40/Trader_Shani_vertical.png/220px-Trader_Shani_vertical.png.webp"
+    },
     "shop": [
       {
         "name": "Binoculars",
@@ -539,6 +547,10 @@
     "name": "Apollo",
     "wiki_url": "https://arcraiders.wiki/wiki/Apollo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Apollo&action=edit",
+    "image_filename": "Trader Apollo horizontal.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/e/ee/Trader_Apollo_horizontal.png/400px-Trader_Apollo_horizontal.png.webp"
+    },
     "shop": [
       {
         "name": "Light Stick",
@@ -673,6 +685,10 @@
     "name": "Lance",
     "wiki_url": "https://arcraiders.wiki/wiki/Lance",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Lance&action=edit",
+    "image_filename": "Trader Lance vertical.png",
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/3/31/Trader_Lance_vertical.png/220px-Trader_Lance_vertical.png.webp"
+    },
     "shop": [
       {
         "name": "Combat Mk. 1",

@@ -798,27 +798,7 @@ if __name__ == "__main__":
     # =============================================================================
     ITEMS_TO_UPDATE = [
         # Add item names here to update them
-
-        "Snowball",
-        "Acoustic Guitar",
-        "Ancient Fort Security Code",
-        "Pilgrim's Peak Security Code",
-        "Raider's Refuge Security Code",
-        "Reinforced Reception Security Code",
-        "Fossilized Lightning",
-        "Burnt-Out Candles",
-        "Tropical Duck",
-        "Gentle Duck",
-        "Flashy Duck",
-        "Familiar Duck",
-        "Doodly Duck",
-        "Alien Duck",
-        "Shredder Gyro",
-        "Shaker",
-        "Damaged Leaper Pulse Unit",
-        "Flow Controller",
-        "Integrated Defibrillator",
-        "Looting Mk. 3 (Safekeeper)",
+        "Shotgun Ammo",
     ]
     
     # Choose mode:

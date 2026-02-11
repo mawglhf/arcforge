@@ -1239,7 +1239,7 @@
     "wiki_url": "https://arcraiders.wiki/wiki/Blue_Gate_Communication_Tower_Key",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Blue_Gate_Communication_Tower_Key&action=edit",
     "infobox": {
-      "image": "Blue Gate Village Key.png",
+      "image": "Blue Gate Key Variant 2.png",
       "name": "Blue Gate Communication Tower Key",
       "rarity": "Rare",
       "quote": "Unlocks a door by the Communication Tower near the Blue Gate",
@@ -1249,18 +1249,15 @@
       "stacksize": 1
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Blue_Gate_Village_Key.png/348px-Blue_Gate_Village_Key.png.webp",
-      "original": "https://arcraiders.wiki/w/images/5/5f/Blue_Gate_Village_Key.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Blue_Gate_Village_Key.png"
-    },
-    "sources": ["Scavenging"]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/de/Blue_Gate_Key_Variant_2.png/348px-Blue_Gate_Key_Variant_2.png.webp"
+    }
   },
   {
     "name": "Blue Gate Confiscation Room Key",
     "wiki_url": "https://arcraiders.wiki/wiki/Blue_Gate_Confiscation_Room_Key",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Blue_Gate_Confiscation_Room_Key&action=edit",
     "infobox": {
-      "image": "Blue Gate Confiscation Room Key.png",
+      "image": "Blue Gate Key Variant 2.png",
       "name": "Blue Gate Confiscation Room Key",
       "rarity": "Epic",
       "quote": "Unlock a door to the confiscated foods area with the Blue Gate tunnels.",
@@ -1271,21 +1268,18 @@
       "stacksize": 1
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/5/51/Blue_Gate_Confiscation_Room_Key.png/348px-Blue_Gate_Confiscation_Room_Key.png.webp",
-      "original": "https://arcraiders.wiki/w/images/5/51/Blue_Gate_Confiscation_Room_Key.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Blue_Gate_Confiscation_Room_Key.png"
-    },
-    "sources": ["Scavenging"]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/de/Blue_Gate_Key_Variant_2.png/348px-Blue_Gate_Key_Variant_2.png.webp"
+    }
   },
   {
     "name": "Blue Gate Cellar Key",
     "wiki_url": "https://arcraiders.wiki/wiki/Blue_Gate_Cellar_Key",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Blue_Gate_Cellar_Key&action=edit",
     "infobox": {
-      "image": "Blue Gate Village Key.png",
+      "image": "Blue Gate Key Variant 1.png",
       "name": "Blue Gate Cellar Key",
-      "rarity": "Uncommon",
-      "quote": "?",
+      "rarity": "Rare",
+      "quote": "Unlocks certain cellar doors near the Blue Gate",
       "type": "Key",
       "location": null,
       "weight": 0.25,
@@ -1293,18 +1287,15 @@
       "stacksize": 1
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Blue_Gate_Village_Key.png/348px-Blue_Gate_Village_Key.png.webp",
-      "original": "https://arcraiders.wiki/w/images/5/5f/Blue_Gate_Village_Key.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Blue_Gate_Village_Key.png"
-    },
-    "sources": ["Scavenging"]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/7/7c/Blue_Gate_Key_Variant_1.png/348px-Blue_Gate_Key_Variant_1.png.webp"
+    }
   },
   {
     "name": "Blue Gate Village Key",
     "wiki_url": "https://arcraiders.wiki/wiki/Blue_Gate_Village_Key",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Blue_Gate_Village_Key&action=edit",
     "infobox": {
-      "image": "Blue Gate Village Key.png",
+      "image": "Blue Gate Key Variant 1.png",
       "name": "Blue Gate Village Key",
       "rarity": "Uncommon",
       "quote": "Unlocks a door to one of the old village buildings near the Blue Gate.",
@@ -1314,11 +1305,8 @@
       "stacksize": 1
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Blue_Gate_Village_Key.png/348px-Blue_Gate_Village_Key.png.webp",
-      "original": "https://arcraiders.wiki/w/images/5/5f/Blue_Gate_Village_Key.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Blue_Gate_Village_Key.png"
-    },
-    "sources": ["Scavenging"]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/7/7c/Blue_Gate_Key_Variant_1.png/348px-Blue_Gate_Key_Variant_1.png.webp"
+    }
   },
   {
     "name": "Bombardier Cell",
@@ -8484,23 +8472,19 @@
     "wiki_url": "https://arcraiders.wiki/wiki/Simple_Gun_Parts",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Simple_Gun_Parts&action=edit",
     "infobox": {
-      "image": "Simple-gun-parts.png",
+      "image": "Simple Gun Parts.png",
       "name": "Simple Gun Parts",
       "rarity": "Uncommon",
-      "quote": "Used to craft weapons. Can be recycled into scrap metal.",
+      "quote": "Used to craft weapons.",
       "type": "Topside Material",
-      "location": "Raider<br>Security",
+      "location": "RaiderSecurity",
       "weight": 0.3,
       "sellprice": 330,
-      "stacksize": 10,
-      "special_types": ["crafting_material"]
+      "stacksize": 10
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/7/77/Simple-gun-parts.png/348px-Simple-gun-parts.png.webp",
-      "original": "https://arcraiders.wiki/w/images/7/77/Simple-gun-parts.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Simple-gun-parts.png"
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/da/Simple_Gun_Parts.png/348px-Simple_Gun_Parts.png.webp"
     },
-    "sources": ["ARC (Wasps, Hornets, Turrets, etc)", "Scavenging", "Recycling", "Sold by Celeste"],
     "recycling": {
       "recycling": [
         {
@@ -18692,61 +18676,21 @@
     "wiki_url": "https://arcraiders.wiki/wiki/Li%27l_Smoke_Grenade",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Li%27l_Smoke_Grenade&action=edit",
     "infobox": {
-      "image": "Lil Smoke Grenade.png",
+      "image": "Li'l Smoke Grenade.png",
       "name": "Li'l Smoke Grenade",
       "rarity": "Common",
-      "quote": "A Grenade that pops into a thick but small smoke cloud on impact, blocking visibility from ARC and other Raiders.",
+      "quote": "A grenade that pops a thick but small smoke cloud on impact, blocking visibility from ARC and other Raiders.",
       "type": "Quick Use-Grenade",
       "location": null,
       "weight": 0.15,
       "sellprice": 300,
       "stacksize": 5,
-      "healing": null,
-      "shield": null,
-      "stamina": null,
-      "arcstun": null,
-      "raiderstun": null,
-      "damage": null,
-      "persecond": null,
-      "usetime": null,
       "duration": "6s",
-      "radius": "2.5m",
-      "recharge": null
+      "radius": "2.5m"
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/1/19/Lil_Smoke_Grenade.png/348px-Lil_Smoke_Grenade.png.webp",
-      "original": "https://arcraiders.wiki/w/images/1/19/Lil_Smoke_Grenade.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:Lil_Smoke_Grenade.png"
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0d/Li%27l_Smoke_Grenade.png/348px-Li%27l_Smoke_Grenade.png.webp"
     },
-    "sources": ["Scavenging", "Crafting"],
-    "crafting": [
-      {
-        "recipe": [
-          {
-            "quantity": 5,
-            "item": "Chemicals"
-          },
-          {
-            "quantity": 1,
-            "item": "Plastic Parts"
-          }
-        ],
-        "workshop": "Utility Station 1"
-      },
-      {
-        "recipe": [
-          {
-            "quantity": 5,
-            "item": "Chemicals"
-          },
-          {
-            "quantity": 1,
-            "item": "Plastic Parts"
-          }
-        ],
-        "workshop": "Inventory"
-      }
-    ],
     "recycling": {
       "recycling": [
         {
@@ -18762,7 +18706,16 @@
           ]
         }
       ],
-      "salvaging": []
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Chemicals"
+            }
+          ]
+        }
+      ]
     }
   },
   {
@@ -21757,141 +21710,68 @@
     "wiki_url": "https://arcraiders.wiki/wiki/Light_Ammo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Light_Ammo&action=edit",
     "infobox": {
-      "image": "LightAmmo_Box.png",
+      "image": "Light Ammo.png",
       "name": "Light Ammo",
       "rarity": "Common",
-      "type": "Ammo",
+      "type": "Ammunition-Light",
       "weight": 0.01,
       "sellprice": 4,
       "stacksize": 100
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/4/4a/LightAmmo_Box.png/348px-LightAmmo_Box.png.webp",
-      "original": "https://arcraiders.wiki/w/images/4/4a/LightAmmo_Box.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:LightAmmo_Box.png"
-    },
-    "crafting": [
-      {
-        "recipe": [
-          {
-            "quantity": 3,
-            "item": "Metal Parts"
-          },
-          {
-            "quantity": 2,
-            "item": "Chemicals"
-          }
-        ],
-        "workshop": "Workbench 1",
-        "output_quantity": 25
-      }
-    ]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/2/22/Light_Ammo.png/348px-Light_Ammo.png.webp"
+    }
   },
   {
     "name": "Medium Ammo",
     "wiki_url": "https://arcraiders.wiki/wiki/Medium_Ammo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Medium_Ammo&action=edit",
     "infobox": {
-      "image": "MediumAmmo_Box.png",
+      "image": "Medium Ammo.png",
       "name": "Medium Ammo",
-      "quote": "Somewhat effective against ARC armor",
       "rarity": "Common",
-      "type": "Ammo",
+      "type": "Ammunition-Medium",
       "weight": 0.025,
       "sellprice": 6,
       "stacksize": 80
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0c/MediumAmmo_Box.png/348px-MediumAmmo_Box.png.webp",
-      "original": "https://arcraiders.wiki/w/images/0/0c/MediumAmmo_Box.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:MediumAmmo_Box.png"
-    },
-    "crafting": [
-      {
-        "recipe": [
-          {
-            "quantity": 3,
-            "item": "Metal Parts"
-          },
-          {
-            "quantity": 2,
-            "item": "Chemicals"
-          }
-        ],
-        "workshop": "Workbench 1",
-        "output_quantity": 20
-      }
-    ]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/d3/Medium_Ammo.png/348px-Medium_Ammo.png.webp"
+    }
   },
   {
     "name": "Heavy Ammo",
     "wiki_url": "https://arcraiders.wiki/wiki/Heavy_Ammo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Heavy_Ammo&action=edit",
     "infobox": {
-      "image": "HeavyAmmo_Box.png",
+      "image": "Heavy Ammo.png",
       "name": "Heavy Ammo",
       "rarity": "Common",
-      "type": "Ammo",
+      "type": "Ammunition-Heavy",
       "weight": 0.05,
       "sellprice": 12,
       "stacksize": 40
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/4/47/HeavyAmmo_Box.png/348px-HeavyAmmo_Box.png.webp",
-      "original": "https://arcraiders.wiki/w/images/4/47/HeavyAmmo_Box.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:HeavyAmmo_Box.png"
-    },
-    "crafting": [
-      {
-        "recipe": [
-          {
-            "quantity": 3,
-            "item": "Metal Parts"
-          },
-          {
-            "quantity": 2,
-            "item": "Chemicals"
-          }
-        ],
-        "workshop": "Workbench 1",
-        "output_quantity": 10
-      }
-    ]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/6/6f/Heavy_Ammo.png/348px-Heavy_Ammo.png.webp"
+    }
   },
   {
     "name": "Shotgun Ammo",
     "wiki_url": "https://arcraiders.wiki/wiki/Shotgun_Ammo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Shotgun_Ammo&action=edit",
     "infobox": {
-      "image": "ShotgunAmmo_Box.png",
+      "image": "Shotgun Ammo.png",
       "name": "Shotgun Ammo",
       "rarity": "Common",
-      "type": "Ammo",
+      "type": "Ammunition-Shotgun",
       "weight": 0.085,
       "sellprice": 20,
       "stacksize": 20
     },
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/c/c1/ShotgunAmmo_Box.png/348px-ShotgunAmmo_Box.png.webp",
-      "original": "https://arcraiders.wiki/w/images/c/c1/ShotgunAmmo_Box.png",
-      "file_page": "https://arcraiders.wiki/wiki/File:ShotgunAmmo_Box.png"
-    },
-    "crafting": [
-      {
-        "recipe": [
-          {
-            "quantity": 3,
-            "item": "Metal Parts"
-          },
-          {
-            "quantity": 2,
-            "item": "Chemicals"
-          }
-        ],
-        "workshop": "Workbench 1",
-        "output_quantity": 5
-      }
-    ]
+      "thumb": "https://arcraiders.wiki/w/images/thumb/6/61/Shotgun_Ammo.png/348px-Shotgun_Ammo.png.webp"
+    }
   },
   {
     "name": "Launcher Ammo",

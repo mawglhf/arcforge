@@ -164,6 +164,8 @@
   "item.wiki": "ويكي",
   "item.craftingGraph": "مخطط التصنيع",
   "item.craftingTable": "جدول الصناعة",
+  "item.graph": "مخطط",
+  "item.table": "جدول",
   "item.notAvailable": "غير متوفر",
 
   "grid.noItemsFound": "لم يتم العثور على عناصر",
@@ -221,5 +223,15 @@
   "track.clearAll": "مسح الكل",
   "track.clearAllTitle": "مسح جميع العناصر المتتبعة",
   "track.noItemsYet": "لا توجد عناصر متتبعة بعد.",
-  "track.openTrackedItems": "فتح العناصر المتتبعة"
+  "track.openTrackedItems": "فتح العناصر المتتبعة",
+
+  "favorite.favorite": "مفضلة",
+  "favorite.unfavorite": "إزالة من المفضلة",
+  "favorite.showFavoriteIcons": "انقر للمفضلة",
+  "favorite.favoriteItems": "العناصر المفضلة",
+  "favorite.clickToNavigate": "انقر على عنصر للانتقال إلى صفحة التفاصيل",
+  "favorite.clearAll": "مسح الكل",
+  "favorite.clearAllTitle": "مسح جميع العناصر المفضلة",
+  "favorite.noItemsYet": "لا توجد عناصر مفضلة بعد.",
+  "favorite.openFavoriteItems": "فتح العناصر المفضلة"
 }

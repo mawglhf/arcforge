@@ -161,6 +161,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "Üretim Grafiği",
   "item.craftingTable": "Üretim Tablosu",
+  "item.graph": "Grafik",
+  "item.table": "Tablo",
   "item.notAvailable": "Mevcut Değil",
 
   "grid.noItemsFound": "Eşya bulunamadı",
@@ -218,5 +220,15 @@
   "track.clearAll": "Tümünü Temizle",
   "track.clearAllTitle": "Takip edilen tüm eşyaları temizle",
   "track.noItemsYet": "Henüz takip edilen eşya yok.",
-  "track.openTrackedItems": "Takip edilen eşyaları aç"
+  "track.openTrackedItems": "Takip edilen eşyaları aç",
+
+  "favorite.favorite": "Favori",
+  "favorite.unfavorite": "Favoriyi Kaldır",
+  "favorite.showFavoriteIcons": "Favori için tıkla",
+  "favorite.favoriteItems": "Favori Eşyalar",
+  "favorite.clickToNavigate": "Detaylara gitmek için bir eşyaya tıklayın",
+  "favorite.clearAll": "Tümünü Temizle",
+  "favorite.clearAllTitle": "Tüm favori eşyaları temizle",
+  "favorite.noItemsYet": "Henüz favori eşya yok.",
+  "favorite.openFavoriteItems": "Favori eşyaları aç"
 }

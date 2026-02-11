@@ -113,7 +113,7 @@
   "settings.itemSizeHelp": "控制网格中每个物品卡片显示的大小。",
   "settings.displayPriceHelp": "在可用时，在每个物品卡片上显示出售价格。",
   "settings.displayWeightHelp": "在可用时，在每个物品卡片上显示物品重量。",
-  "settings.showTrackIconsHelp": "在物品卡片上显示用于快速追踪/取消追踪的小图标。",
+  "settings.showTrackIconsHelp": "在物品卡片上显示用于快速收藏/取消收藏的小图标。",
   "settings.openCraftingGraphOnClickHelp": "点击物品卡片时，将直接跳转到该物品的制作关系图。",
   "settings.lightweightModeHelp": "关闭部分视觉效果，以提升在性能较弱设备上的流畅度。",
   "settings.showSpecialIcons": "显示特殊图标",
@@ -160,6 +160,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "制作关系图",
   "item.craftingTable": "合成表格",
+  "item.graph": "关系图",
+  "item.table": "表格",
   "item.notAvailable": "N/A",
 
   "grid.noItemsFound": "未找到任何物品",
@@ -217,5 +219,15 @@
   "track.clearAll": "全部清除",
   "track.clearAllTitle": "清除所有已追踪物品",
   "track.noItemsYet": "当前还没有被追踪的物品。",
-  "track.openTrackedItems": "打开已追踪物品"
+  "track.openTrackedItems": "打开已追踪物品",
+
+  "favorite.favorite": "收藏",
+  "favorite.unfavorite": "取消收藏",
+  "favorite.showFavoriteIcons": "点击收藏",
+  "favorite.favoriteItems": "收藏物品",
+  "favorite.clickToNavigate": "点击物品可跳转到详情页面",
+  "favorite.clearAll": "全部清除",
+  "favorite.clearAllTitle": "清除所有收藏物品",
+  "favorite.noItemsYet": "当前还没有收藏的物品。",
+  "favorite.openFavoriteItems": "打开收藏物品"
 }

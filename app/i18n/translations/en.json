@@ -113,7 +113,7 @@
   "settings.itemSizeHelp": "Controls how large each item card appears in the grid.",
   "settings.displayPriceHelp": "Shows the sell price on each item card when available.",
   "settings.displayWeightHelp": "Shows the item weight on each item card when available.",
-  "settings.showTrackIconsHelp": "Shows small track/untrack icons on item cards for quick tracking.",
+  "settings.showTrackIconsHelp": "Shows small favorite/unfavorite icons on item cards for quick favoriting.",
   "settings.lightweightModeHelp": "Disables some visual effects to improve performance on slower devices.",
   "settings.showSpecialIcons": "Show Special Icons",
   "settings.showSpecialIconsHelp": "Shows icons for special item types (workshop upgrade, expedition, quest, etc.) on the item cards.",
@@ -159,6 +159,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "Crafting Graph",
   "item.craftingTable": "Crafting Table",
+  "item.graph": "Graph",
+  "item.table": "Table",
   "item.notAvailable": "N/A",
 
   "grid.noItemsFound": "No items found",
@@ -223,5 +225,15 @@
   "track.clearAll": "Clear All",
   "track.clearAllTitle": "Clear all tracked items",
   "track.noItemsYet": "No tracked items yet.",
-  "track.openTrackedItems": "Open tracked items"
+  "track.openTrackedItems": "Open tracked items",
+
+  "favorite.favorite": "Favorite",
+  "favorite.unfavorite": "Unfavorite",
+  "favorite.showFavoriteIcons": "Click to Favorite",
+  "favorite.favoriteItems": "Favorite Items",
+  "favorite.clickToNavigate": "Click an item to navigate to details",
+  "favorite.clearAll": "Clear All",
+  "favorite.clearAllTitle": "Clear all favorite items",
+  "favorite.noItemsYet": "No favorite items yet.",
+  "favorite.openFavoriteItems": "Open favorite items"
 }

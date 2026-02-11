@@ -161,6 +161,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "Graf wytwarzania",
   "item.craftingTable": "Tabela wytwarzania",
+  "item.graph": "Graf",
+  "item.table": "Tabela",
   "item.notAvailable": "Niedostępne",
 
   "grid.noItemsFound": "Nie znaleziono przedmiotów",
@@ -218,5 +220,15 @@
   "track.clearAll": "Wyczyść wszystko",
   "track.clearAllTitle": "Wyczyść wszystkie śledzone przedmioty",
   "track.noItemsYet": "Brak śledzonych przedmiotów.",
-  "track.openTrackedItems": "Otwórz śledzone przedmioty"
+  "track.openTrackedItems": "Otwórz śledzone przedmioty",
+
+  "favorite.favorite": "Ulubione",
+  "favorite.unfavorite": "Usuń z ulubionych",
+  "favorite.showFavoriteIcons": "Kliknij aby dodać do ulubionych",
+  "favorite.favoriteItems": "Ulubione przedmioty",
+  "favorite.clickToNavigate": "Kliknij przedmiot, aby przejść do szczegółów",
+  "favorite.clearAll": "Wyczyść wszystko",
+  "favorite.clearAllTitle": "Wyczyść wszystkie ulubione przedmioty",
+  "favorite.noItemsYet": "Brak ulubionych przedmiotów.",
+  "favorite.openFavoriteItems": "Otwórz ulubione przedmioty"
 }

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCog, faEye, faDiagramProject, faTags } from "@fortawesome/free-solid-svg-icons";
+import { faCog, faHeart, faDiagramProject, faTags } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "../../i18n";
 
 interface SettingsPanelProps {
@@ -202,16 +202,16 @@ export default function SettingsPanel({
               </TooltipLabel>
             </div>
 
-            {/* Show Track Icons */}
+            {/* Show Favorite Icons */}
             <div>
               <TooltipLabel title={t("settings.showTrackIconsHelp")}>
                 <label className="flex items-center justify-between cursor-pointer group">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 flex items-center justify-center bg-black/60 rounded-lg border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
-                      <FontAwesomeIcon icon={faEye} className="text-white text-lg" />
+                      <FontAwesomeIcon icon={faHeart} className="text-white text-lg" />
                     </div>
                     <span className="text-sm font-bold text-blue-300 uppercase tracking-wider">
-                      {t("track.showTrackIcons")}
+                      {t("favorite.showFavoriteIcons")}
                     </span>
                   </div>
                   <div

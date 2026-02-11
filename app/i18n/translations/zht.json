@@ -164,6 +164,8 @@
   "item.wiki": "Wiki",
   "item.craftingGraph": "製作關係圖",
   "item.craftingTable": "合成表格",
+  "item.graph": "關係圖",
+  "item.table": "表格",
   "item.notAvailable": "N/A",
 
   "grid.noItemsFound": "找不到任何物品",
@@ -221,5 +223,15 @@
   "track.clearAll": "全部清除",
   "track.clearAllTitle": "清除所有已追蹤物品",
   "track.noItemsYet": "目前尚未追蹤任何物品。",
-  "track.openTrackedItems": "開啟已追蹤物品"
+  "track.openTrackedItems": "開啟已追蹤物品",
+
+  "favorite.favorite": "收藏",
+  "favorite.unfavorite": "取消收藏",
+  "favorite.showFavoriteIcons": "點擊收藏",
+  "favorite.favoriteItems": "收藏物品",
+  "favorite.clickToNavigate": "點擊物品可前往詳細資訊",
+  "favorite.clearAll": "全部清除",
+  "favorite.clearAllTitle": "清除所有收藏物品",
+  "favorite.noItemsYet": "目前尚未收藏任何物品。",
+  "favorite.openFavoriteItems": "開啟收藏物品"
 }

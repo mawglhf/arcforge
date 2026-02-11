@@ -77,7 +77,7 @@
       "weight": 1.0,
       "sellprice": 1750,
       "stacksize": 5,
-      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "special_types": ["crafting_material", "expedition", "expedition_2", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gear_bench",
@@ -91,6 +91,12 @@
         }
       ],
       "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 5
+        }
+      ],
+      "expedition_2_parts": [
         {
           "part": 4,
           "quantity": 5
@@ -482,6 +488,12 @@
             "name": "required"
           }
         ]
+      },
+      {
+        "name": "Looting Mk. 3 (Safekeeper)",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
       }
     ]
   },
@@ -2321,6 +2333,19 @@
           }
         ],
         "output_level": "Hullcracker IV"
+      },
+      {
+        "name": "Flow Controller",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "output_level": "Flow Controller"
       }
     ]
   },
@@ -2712,7 +2737,13 @@
       "weight": 0.25,
       "sellprice": 200,
       "stacksize": 15,
-      "special_types": ["crafting_material", "expedition", "quest", "workshop_upgrade"],
+      "special_types": [
+        "crafting_material",
+        "expedition",
+        "expedition_2",
+        "quest",
+        "workshop_upgrade"
+      ],
       "workshop_upgrades": [
         {
           "workshop": "medical_lab",
@@ -2740,6 +2771,12 @@
         {
           "quest": "Clearer Skies",
           "quantity": 3
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 1,
+          "quantity": 80
         }
       ]
     },
@@ -3173,6 +3210,45 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 1
+      },
+      {
+        "name": "Shredder Gyro",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "output_level": "Shredder Gyro"
+      },
+      {
+        "name": "Damaged Leaper Pulse Unit",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Damaged Leaper Pulse Unit"
+          }
+        ],
+        "output_level": "Damaged Leaper Pulse Unit"
+      },
+      {
+        "name": "Damaged Leaper Pulse Unit",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Damaged Leaper Pulse Unit"
+          }
+        ],
+        "output_level": "Damaged Leaper Pulse Unit"
       }
     ]
   },
@@ -4064,7 +4140,7 @@
       "weight": 0.25,
       "sellprice": 250,
       "stacksize": 15,
-      "special_types": ["crafting_material", "expedition", "quest"],
+      "special_types": ["crafting_material", "expedition", "expedition_2", "quest"],
       "expedition_parts": [
         {
           "part": 3,
@@ -4075,6 +4151,12 @@
         {
           "quest": "Trash Into Treasure",
           "quantity": 1
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 3,
+          "quantity": 30
         }
       ]
     },
@@ -6244,7 +6326,13 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["expedition_2", "safe_to_recycle"],
+      "expedition_2_parts": [
+        {
+          "part": 2,
+          "quantity": 4
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/7/7f/Cooling_Coil.png/348px-Cooling_Coil.png.webp",
@@ -7950,6 +8038,7 @@
         "candlelight",
         "crafting_material",
         "expedition",
+        "expedition_2",
         "quest",
         "workshop_upgrade"
       ],
@@ -7976,6 +8065,12 @@
         {
           "part": 1,
           "quantity": 5
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 2,
+          "quantity": 35
         }
       ]
     },
@@ -8082,7 +8177,7 @@
       "weight": 0.5,
       "sellprice": 640,
       "stacksize": 10,
-      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "special_types": ["crafting_material", "expedition", "expedition_2", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gear_bench",
@@ -8099,6 +8194,12 @@
         {
           "part": 2,
           "quantity": 30
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 2,
+          "quantity": 20
         }
       ]
     },
@@ -8512,6 +8613,12 @@
             "name": "required"
           }
         ]
+      },
+      {
+        "name": "Looting Mk. 3 (Safekeeper)",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
       }
     ]
   },
@@ -8590,8 +8697,14 @@
       "duration": null,
       "radius": null,
       "recharge": null,
-      "special_types": ["crafting_material", "expedition"],
+      "special_types": ["crafting_material", "expedition", "expedition_2"],
       "expedition_parts": [
+        {
+          "part": 3,
+          "quantity": 1
+        }
+      ],
+      "expedition_2_parts": [
         {
           "part": 3,
           "quantity": 1
@@ -9103,6 +9216,18 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 1
+      },
+      {
+        "name": "Fossilized Lightning",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 3
+      },
+      {
+        "name": "Fossilized Lightning",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2
       }
     ]
   },
@@ -9723,7 +9848,13 @@
       "weight": 1.5,
       "sellprice": 3000,
       "stacksize": 3,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["expedition_2", "safe_to_recycle"],
+      "expedition_2_parts": [
+        {
+          "part": 4,
+          "quantity": 5
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/3/36/Frequency_Modulation_Box.png/348px-Frequency_Modulation_Box.png.webp",
@@ -11482,7 +11613,13 @@
       "weight": 1.5,
       "stacksize": 3,
       "sellprice": 6000,
-      "special_types": ["safe_to_recycle"]
+      "special_types": ["expedition_2", "safe_to_recycle"],
+      "expedition_2_parts": [
+        {
+          "part": 4,
+          "quantity": 3
+        }
+      ]
     },
     "image_urls": {
       "thumb": "https://arcraiders.wiki/w/images/thumb/e/e7/Ion_Sputter.png/348px-Ion_Sputter.png.webp",
@@ -11715,7 +11852,7 @@
       "stacksize": 3,
       "damage": 100.0,
       "radius": "10m",
-      "special_types": ["expedition", "workshop_upgrade"],
+      "special_types": ["expedition", "expedition_2", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "utility_station",
@@ -11724,6 +11861,12 @@
         }
       ],
       "expedition_parts": [
+        {
+          "part": 4,
+          "quantity": 3
+        }
+      ],
+      "expedition_2_parts": [
         {
           "part": 4,
           "quantity": 3
@@ -11792,7 +11935,7 @@
       "weight": 0.2,
       "sellprice": 2000,
       "stacksize": 3,
-      "special_types": ["candlelight", "expedition"],
+      "special_types": ["candlelight", "expedition", "expedition_2"],
       "expedition_parts": [
         {
           "part": 3,
@@ -11803,6 +11946,12 @@
         {
           "part": 2,
           "quantity": 3
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 3,
+          "quantity": 4
         }
       ]
     },
@@ -14593,6 +14742,45 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 2
+      },
+      {
+        "name": "Shredder Gyro",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "output_level": "Shredder Gyro"
+      },
+      {
+        "name": "Shredder Gyro",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "output_level": "Shredder Gyro"
+      },
+      {
+        "name": "Flow Controller",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "output_level": "Flow Controller"
       }
     ]
   },
@@ -15895,7 +16083,7 @@
       "weight": 0.1,
       "sellprice": 75,
       "stacksize": 50,
-      "special_types": ["crafting_material", "expedition", "workshop_upgrade"],
+      "special_types": ["crafting_material", "expedition", "expedition_2", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gunsmith",
@@ -15909,6 +16097,12 @@
         }
       ],
       "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 150
+        }
+      ],
+      "expedition_2_parts": [
         {
           "part": 1,
           "quantity": 150
@@ -17461,6 +17655,12 @@
             "name": "Workbench 1"
           }
         ]
+      },
+      {
+        "name": "Acoustic Guitar",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 4
       }
     ]
   },
@@ -18671,7 +18871,7 @@
       "usetime": null,
       "duration": null,
       "radius": null,
-      "special_types": ["candlelight", "crafting_material", "workshop_upgrade"],
+      "special_types": ["candlelight", "crafting_material", "expedition_2", "workshop_upgrade"],
       "workshop_upgrades": [
         {
           "workshop": "gear_bench",
@@ -18688,6 +18888,12 @@
         {
           "part": 1,
           "quantity": 25
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 1,
+          "quantity": 200
         }
       ]
     },
@@ -19514,6 +19720,18 @@
         "direction": "in",
         "relation": "salvage_from",
         "quantity": 1
+      },
+      {
+        "name": "Shaker",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 10
+      },
+      {
+        "name": "Shaker",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 4
       }
     ]
   },
@@ -20567,6 +20785,12 @@
       },
       {
         "name": "Anvil Splitter",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1
+      },
+      {
+        "name": "Looting Mk. 3 (Safekeeper)",
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 1
@@ -23585,6 +23809,19 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 1
+      },
+      {
+        "name": "Flow Controller",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "output_level": "Flow Controller"
       }
     ]
   },
@@ -26054,8 +26291,14 @@
       "damage": null,
       "persecond": null,
       "usetime": null,
-      "special_types": ["crafting_material", "expedition"],
+      "special_types": ["crafting_material", "expedition", "expedition_2"],
       "expedition_parts": [
+        {
+          "part": 1,
+          "quantity": 15
+        }
+      ],
+      "expedition_2_parts": [
         {
           "part": 1,
           "quantity": 15
@@ -28028,7 +28271,7 @@
       "weight": 0.25,
       "sellprice": 200,
       "stacksize": 15,
-      "special_types": ["crafting_material", "expedition", "quest"],
+      "special_types": ["crafting_material", "expedition", "expedition_2", "quest"],
       "expedition_parts": [
         {
           "part": 2,
@@ -28039,6 +28282,12 @@
         {
           "quest": "Trash Into Treasure",
           "quantity": 6
+        }
+      ],
+      "expedition_2_parts": [
+        {
+          "part": 2,
+          "quantity": 25
         }
       ]
     },
@@ -28625,6 +28874,18 @@
         "direction": "in",
         "relation": "recycle_from",
         "quantity": 1
+      },
+      {
+        "name": "Acoustic Guitar",
+        "direction": "in",
+        "relation": "recycle_from",
+        "quantity": 6
+      },
+      {
+        "name": "Acoustic Guitar",
+        "direction": "in",
+        "relation": "salvage_from",
+        "quantity": 3
       }
     ]
   },
@@ -31960,6 +32221,24 @@
             "type": "price",
             "amount": 1425,
             "currency": "Coins"
+          }
+        ]
+      },
+      {
+        "name": "Tian Wen",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 8700,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
           }
         ]
       },
@@ -39616,6 +39895,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Lance",
         "direction": "in",
         "relation": "sold_by",
@@ -39733,6 +40030,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Lance",
         "direction": "in",
         "relation": "sold_by",
@@ -39848,6 +40163,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       },
       {
         "name": "Lance",
@@ -41127,7 +41460,7 @@
           },
           {
             "type": "stock",
-            "value": "5/5",
+            "value": "10/10",
             "is_limited": true
           }
         ]
@@ -41207,6 +41540,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
       },
       {
         "name": "Lance",
@@ -41628,6 +41979,24 @@
         "quantity": 5
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "5/5",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Lance",
         "direction": "in",
         "relation": "sold_by",
@@ -41892,7 +42261,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -41980,7 +42349,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -42463,7 +42832,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -42959,24 +43328,6 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
-      },
-      {
-        "name": "Apollo",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 4800,
-            "currency": "Coins"
-          },
-          {
-            "type": "stock",
-            "value": "3/3",
-            "is_limited": true
-          }
-        ]
       }
     ]
   },
@@ -43360,7 +43711,7 @@
           },
           {
             "type": "stock",
-            "value": "6/6",
+            "value": "3/3",
             "is_limited": true
           }
         ]
@@ -45572,24 +45923,6 @@
           }
         ],
         "output_level": "1x Stable Stock I"
-      },
-      {
-        "name": "Tian Wen",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 1920,
-            "currency": "Coins"
-          },
-          {
-            "type": "stock",
-            "value": "5/5",
-            "is_limited": true
-          }
-        ]
       }
     ]
   },
@@ -45684,6 +46017,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45895,6 +46246,42 @@
           }
         ],
         "output_level": "1x Silencer I"
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Tian Wen",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 6000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -45982,6 +46369,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -46139,6 +46544,24 @@
         "quantity": 1
       },
       {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Tian Wen",
         "direction": "in",
         "relation": "sold_by",
@@ -46241,6 +46664,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -46437,6 +46878,42 @@
           }
         ],
         "input_level": "1x Stable Stock II"
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 100,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Tian Wen",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 6000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -47722,6 +48199,24 @@
         "direction": "out",
         "relation": "recycle_to",
         "quantity": 1
+      },
+      {
+        "name": "Tian Wen",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 15000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -47886,10 +48381,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 25
           }
         ]
       }
@@ -47950,10 +48441,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 20
           }
         ]
       }
@@ -48013,10 +48500,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 10
           }
         ]
       }
@@ -48076,10 +48559,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 5
           }
         ]
       }
@@ -48140,10 +48619,6 @@
             "type": "price",
             "amount": 4500,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 6
           }
         ]
       }
@@ -48335,6 +48810,24 @@
         "direction": "out",
         "relation": "salvage_to",
         "quantity": 1
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 60,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
       }
     ]
   },
@@ -48399,14 +48892,666 @@
     ]
   },
   {
+    "name": "Snowball",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Snowball",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Snowball&action=edit",
+    "infobox": {
+      "image": "Snowball.png",
+      "name": "Snowball",
+      "rarity": "Common",
+      "quote": "A compact snowball fashioned out of the most malleable and aerodynamic snow.",
+      "type": "Misc",
+      "location": "Nature",
+      "weight": 0.2,
+      "sellprice": 10,
+      "stacksize": 5,
+      "damage": 1.0
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/04/Snowball.png/348px-Snowball.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Acoustic Guitar",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Acoustic_Guitar",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Acoustic_Guitar&action=edit",
+    "infobox": {
+      "image": "Acoustic Guitar.png",
+      "name": "Acoustic Guitar",
+      "rarity": "Legendary",
+      "quote": "A playable acoustic guitar used to attract ARC's attention, and impress other Raiders.",
+      "type": "Quick Use-Gadget",
+      "location": null,
+      "weight": 1.0,
+      "sellprice": 7000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Acoustic_Guitar.png/348px-Acoustic_Guitar.png.webp"
+    },
+    "edges": [
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 6
+      },
+      {
+        "name": "Metal Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 4
+      },
+      {
+        "name": "Wires",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 3
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 70,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Ancient Fort Security Code",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Ancient_Fort_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Ancient_Fort_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Ancient Fort Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Pilgrim's Peak Security Code",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Pilgrim%27s_Peak_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Pilgrim%27s_Peak_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Pilgrim's Peak Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Raider's Refuge Security Code",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Raider%27s_Refuge_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Raider%27s_Refuge_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Raider's Refuge Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Reinforced Reception Security Code",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Reinforced_Reception_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Reinforced_Reception_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Reinforced Reception Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Fossilized Lightning",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Fossilized_Lightning",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Fossilized_Lightning&action=edit",
+    "infobox": {
+      "image": "Fossilized Lightning.png",
+      "name": "Fossilized Lightning",
+      "rarity": "Epic",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Nature",
+      "location": "Nature",
+      "weight": 0.25,
+      "sellprice": 4000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/81/Fossilized_Lightning.png/348px-Fossilized_Lightning.png.webp"
+    },
+    "edges": [
+      {
+        "name": "Explosive Compound",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 3
+      },
+      {
+        "name": "Explosive Compound",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "name": "Burnt-Out Candles",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Burnt-Out_Candles",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Burnt-Out_Candles&action=edit",
+    "infobox": {
+      "image": "Burnt-Out Candles.png",
+      "name": "Burnt-Out Candles",
+      "rarity": "Common",
+      "quote": "After the grid fell candles became the preferred source of light for many.",
+      "type": "Trinket",
+      "location": "ResidentialOld World",
+      "weight": 0.2,
+      "sellprice": 640,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "big"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0a/Burnt-Out_Candles.png/348px-Burnt-Out_Candles.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Tropical Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Tropical_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Tropical_Duck&action=edit",
+    "infobox": {
+      "image": "Tropical Duck.png",
+      "name": "Tropical Duck",
+      "rarity": "Uncommon",
+      "quote": "It quietly dreams of taking to the skies with its brethren.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/c/cc/Tropical_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Gentle Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Gentle_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Gentle_Duck&action=edit",
+    "infobox": {
+      "image": "Gentle Duck.png",
+      "name": "Gentle Duck",
+      "rarity": "Uncommon",
+      "quote": "Udderly adorable.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/c/c4/Gentle_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Flashy Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Flashy_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Flashy_Duck&action=edit",
+    "infobox": {
+      "image": "Flashy Duck.png",
+      "name": "Flashy Duck",
+      "rarity": "Rare",
+      "quote": "Lovingly hand-painted by someone of great talent—clearly. Any guesses who?",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 3000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/f/f1/Flashy_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Familiar Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Familiar_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Familiar_Duck&action=edit",
+    "infobox": {
+      "image": "Familiar Duck.png",
+      "name": "Familiar Duck",
+      "rarity": "Epic",
+      "quote": "Unlike the real one, this one fits in your pack.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 7000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/4/4f/Familiar_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Doodly Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Doodly_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Doodly_Duck&action=edit",
+    "infobox": {
+      "image": "Doodly Duck.png",
+      "name": "Doodly Duck",
+      "rarity": "Rare",
+      "quote": "Everything is a canvas to a creative child.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 3000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/9/91/Doodly_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Alien Duck",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Alien_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Alien_Duck&action=edit",
+    "infobox": {
+      "image": "Alien Duck.png",
+      "name": "Alien Duck",
+      "rarity": "Uncommon",
+      "quote": "A long, long way from home.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/3/3e/Alien_Duck.png"
+    },
+    "edges": []
+  },
+  {
+    "name": "Shredder Gyro",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shredder_Gyro",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shredder_Gyro&action=edit",
+    "infobox": {
+      "image": "Shredder Gyro.png",
+      "name": "Shredder Gyro",
+      "rarity": "Rare",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "ARC",
+      "weight": 1.0,
+      "sellprice": 3000,
+      "stacksize": 3,
+      "special_types": ["expedition_2", "safe_to_recycle"],
+      "expedition_2_parts": [
+        {
+          "part": 3,
+          "quantity": 10
+        }
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/9/96/Shredder_Gyro.png/348px-Shredder_Gyro.png.webp"
+    },
+    "edges": [
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "input_level": "Shredder Gyro"
+      },
+      {
+        "name": "ARC Alloy",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "input_level": "Shredder Gyro"
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Shredder Gyro"
+          }
+        ],
+        "input_level": "Shredder Gyro"
+      }
+    ]
+  },
+  {
+    "name": "Shaker",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shaker",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shaker&action=edit",
+    "infobox": {
+      "image": "Shaker.png",
+      "name": "Shaker",
+      "rarity": "Uncommon",
+      "quote": "A rhythmic instrument used to attract ARC's attention, and impress other Raiders.",
+      "type": "Quick Use-Gadget",
+      "location": "Residential",
+      "weight": 0.2,
+      "sellprice": 1000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/2/22/Shaker.png"
+    },
+    "edges": [
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 10
+      },
+      {
+        "name": "Plastic Parts",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 4
+      },
+      {
+        "name": "Shani",
+        "direction": "in",
+        "relation": "sold_by",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Damaged Leaper Pulse Unit",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Damaged_Leaper_Pulse_Unit",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Damaged_Leaper_Pulse_Unit&action=edit",
+    "infobox": {
+      "image": "Damaged Leaper Pulse Unit.png",
+      "name": "Damaged Leaper Pulse Unit",
+      "rarity": "Common",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "ARC",
+      "weight": 0.3,
+      "sellprice": 2000,
+      "stacksize": 3
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0a/Damaged_Leaper_Pulse_Unit.png/348px-Damaged_Leaper_Pulse_Unit.png.webp"
+    },
+    "edges": [
+      {
+        "name": "ARC Alloy",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 3,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Damaged Leaper Pulse Unit"
+          }
+        ],
+        "input_level": "Damaged Leaper Pulse Unit"
+      },
+      {
+        "name": "ARC Alloy",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Damaged Leaper Pulse Unit"
+          }
+        ],
+        "input_level": "Damaged Leaper Pulse Unit"
+      }
+    ]
+  },
+  {
+    "name": "Flow Controller",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Flow_Controller",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Flow_Controller&action=edit",
+    "infobox": {
+      "image": "Flow Controller.png",
+      "name": "Flow Controller",
+      "rarity": "Rare",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "Exodus",
+      "weight": 1.5,
+      "sellprice": 3000,
+      "stacksize": 3
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/b/b6/Flow_Controller.png/348px-Flow_Controller.png.webp"
+    },
+    "edges": [
+      {
+        "name": "Advanced Mechanical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "input_level": "Flow Controller"
+      },
+      {
+        "name": "Sensors",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "recycle_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "input_level": "Flow Controller"
+      },
+      {
+        "name": "Mechanical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2,
+        "dependency": [
+          {
+            "type": "salvage_level",
+            "name": "Flow Controller"
+          }
+        ],
+        "input_level": "Flow Controller"
+      }
+    ]
+  },
+  {
+    "name": "Integrated Defibrillator",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Integrated_Defibrillator",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Integrated_Defibrillator&action=edit",
+    "infobox": {
+      "image": "Defibrillator.png",
+      "name": "Integrated Defibrillator",
+      "rarity": "Rare",
+      "quote": "Defibrillator Recharger on a fixed cooldown. Can be used like a normal Defibrillator, but cannot be dropped or removed from its slot.",
+      "warning": "Locked to equipped augmentCooldown: 240s",
+      "type": "Quick Use-Regen",
+      "usetime": "1.5s",
+      "healing": 50.0,
+      "weight": 0.0,
+      "stacksize": 1,
+      "sellprice": 0
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Defibrillator.png/348px-Defibrillator.png.webp"
+    },
+    "edges": []
+  },
+  {
+    "name": "Looting Mk. 3 (Safekeeper)",
+    "node_type": "item",
+    "wiki_url": "https://arcraiders.wiki/wiki/Looting_Mk._3_%28Safekeeper%29",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Looting_Mk._3_%28Safekeeper%29&action=edit",
+    "infobox": {
+      "image": "Looting Mk. 3 (Safekeeper).png",
+      "name": "Looting Mk. 3 (Safekeeper)",
+      "rarity": "Epic",
+      "warning": "A Safe Pocket that allows any items to be stored.",
+      "quote": "A looting augment that trades weight and utility for increased looting potential.",
+      "shield_compatibility": "3",
+      "slot_weapon": "2",
+      "slot_backpack": "18",
+      "slot_quickuse": "4",
+      "slot_safepocket": "1",
+      "slot_healing": "0",
+      "slot_grenade": "0",
+      "slot_trinket": "2",
+      "slot_utility": "0",
+      "weight": 5.0,
+      "wlimit": 65.0,
+      "sellprice": 5000
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/c/c6/Looting_Mk._3_%28Safekeeper%29.png/348px-Looting_Mk._3_%28Safekeeper%29.png.webp",
+      "file_page": "https://arcraiders.wiki/wiki/File:Looting_Mk._3_(Safekeeper).png"
+    },
+    "edges": [
+      {
+        "name": "Advanced Electrical Components",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Processor",
+        "direction": "out",
+        "relation": "recycle_to",
+        "quantity": 1
+      },
+      {
+        "name": "Electrical Components",
+        "direction": "out",
+        "relation": "salvage_to",
+        "quantity": 2
+      }
+    ]
+  },
+  {
     "name": "Celeste",
     "node_type": "trader",
     "wiki_url": "https://arcraiders.wiki/wiki/Celeste",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Celeste&action=edit",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/0/00/Trader_Celeste.png/100px-Trader_Celeste.png.webp",
-      "original": "https://arcraiders.wiki/w/images/thumb/0/00/Trader_Celeste.png/150px-Trader_Celeste.png.webp"
-    },
     "edges": [
       {
         "name": "Chemicals",
@@ -48876,10 +50021,6 @@
     "node_type": "trader",
     "wiki_url": "https://arcraiders.wiki/wiki/Shani",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Shani&action=edit",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/0/06/Trader_Shani.png/100px-Trader_Shani.png.webp",
-      "original": "https://arcraiders.wiki/w/images/thumb/0/06/Trader_Shani.png/150px-Trader_Shani.png.webp"
-    },
     "edges": [
       {
         "name": "Binoculars",
@@ -48960,7 +50101,7 @@
         ]
       },
       {
-        "name": "Combat_Mk._2",
+        "name": "Combat Mk. 2",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -48978,7 +50119,7 @@
         ]
       },
       {
-        "name": "Looting_Mk._2",
+        "name": "Looting Mk. 2",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -48996,7 +50137,7 @@
         ]
       },
       {
-        "name": "Tactical_Mk._2",
+        "name": "Tactical Mk. 2",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49014,7 +50155,7 @@
         ]
       },
       {
-        "name": "Angled_Grip_II",
+        "name": "Angled Grip II",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49032,7 +50173,7 @@
         ]
       },
       {
-        "name": "Compensator_II",
+        "name": "Compensator II",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49050,7 +50191,7 @@
         ]
       },
       {
-        "name": "Extended_Light_Mag_II",
+        "name": "Extended Light Mag II",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49068,7 +50209,7 @@
         ]
       },
       {
-        "name": "Extended_Medium_Mag_II",
+        "name": "Extended Medium Mag II",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49086,7 +50227,7 @@
         ]
       },
       {
-        "name": "Silencer_I",
+        "name": "Silencer I",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49104,7 +50245,7 @@
         ]
       },
       {
-        "name": "Stable_Stock_II",
+        "name": "Stable Stock II",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49117,6 +50258,24 @@
           {
             "type": "stock",
             "value": "2/2",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Acoustic Guitar",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 70,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
             "is_limited": true
           }
         ]
@@ -49140,7 +50299,7 @@
         ]
       },
       {
-        "name": "Sterilized_Bandage",
+        "name": "Shaker",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49158,7 +50317,25 @@
         ]
       },
       {
-        "name": "Surge_Shield_Recharger",
+        "name": "Sterilized Bandage",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 40,
+            "currency": "Cred"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Surge Shield Recharger",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49194,7 +50371,7 @@
         ]
       },
       {
-        "name": "Fireworks_Box",
+        "name": "Fireworks Box",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -49290,301 +50467,12 @@
     ]
   },
   {
-    "name": "Combat_Mk._2",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Looting_Mk._2",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Tactical_Mk._2",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Angled_Grip_II",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Compensator_II",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Extended_Light_Mag_II",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Extended_Medium_Mag_II",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Silencer_I",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "1/1",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Stable_Stock_II",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 100,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "2/2",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Sterilized_Bandage",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 40,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "3/3",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Surge_Shield_Recharger",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 40,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "5/5",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Fireworks_Box",
-    "node_type": "item",
-    "edges": [
-      {
-        "name": "Shani",
-        "direction": "in",
-        "relation": "sold_by",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 60,
-            "currency": "Cred"
-          },
-          {
-            "type": "stock",
-            "value": "3/3",
-            "is_limited": true
-          }
-        ]
-      }
-    ]
-  },
-  {
     "name": "Tian Wen",
     "node_type": "trader",
     "wiki_url": "https://arcraiders.wiki/wiki/Tian_Wen",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Tian_Wen&action=edit",
     "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/2/20/Trader_Tian_Wen.png/100px-Trader_Tian_Wen.png.webp",
-      "original": "https://arcraiders.wiki/w/images/thumb/2/20/Trader_Tian_Wen.png/150px-Trader_Tian_Wen.png.webp"
+      "thumb": "https://arcraiders.wiki/w/images/thumb/d/d5/Trader_Tian_Wen_horizontal.png/400px-Trader_Tian_Wen_horizontal.png.webp"
     },
     "edges": [
       {
@@ -49662,10 +50550,6 @@
             "type": "price",
             "amount": 4500,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 6
           }
         ]
       },
@@ -49679,10 +50563,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 10
           }
         ]
       },
@@ -49696,10 +50576,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 25
           }
         ]
       },
@@ -49713,10 +50589,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 20
           }
         ]
       },
@@ -49730,10 +50602,6 @@
             "type": "price",
             "amount": 900,
             "currency": "Coins"
-          },
-          {
-            "type": "ammo_count",
-            "value": 5
           }
         ]
       },
@@ -49828,6 +50696,42 @@
         ]
       },
       {
+        "name": "Ferro",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 8700,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Padded Stock",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 15000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      },
+      {
         "name": "Angled Grip III",
         "direction": "out",
         "relation": "trader",
@@ -49877,6 +50781,42 @@
           {
             "type": "stock",
             "value": "3/3",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Silencer I",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 6000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "1/1",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Stable Stock II",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 6000,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "2/2",
             "is_limited": true
           }
         ]
@@ -50008,24 +50948,6 @@
         ]
       },
       {
-        "name": "Stable Stock I",
-        "direction": "out",
-        "relation": "trader",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 1920,
-            "currency": "Coins"
-          },
-          {
-            "type": "stock",
-            "value": "5/5",
-            "is_limited": true
-          }
-        ]
-      },
-      {
         "name": "Vertical Grip I",
         "direction": "out",
         "relation": "trader",
@@ -50050,10 +50972,6 @@
     "node_type": "trader",
     "wiki_url": "https://arcraiders.wiki/wiki/Apollo",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Apollo&action=edit",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/9/96/Trader_Apollo.png/100px-Trader_Apollo.png.webp",
-      "original": "https://arcraiders.wiki/w/images/thumb/9/96/Trader_Apollo.png/150px-Trader_Apollo.png.webp"
-    },
     "edges": [
       {
         "name": "Light Stick",
@@ -50138,6 +51056,19 @@
         ]
       },
       {
+        "name": "Remote Raider Flare",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 810,
+            "currency": "Coins"
+          }
+        ]
+      },
+      {
         "name": "Recorder",
         "direction": "out",
         "relation": "trader",
@@ -50168,38 +51099,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
-            "is_limited": true
-          }
-        ]
-      },
-      {
-        "name": "Remote Raider Flare",
-        "direction": "out",
-        "relation": "trader",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 810,
-            "currency": "Coins"
-          }
-        ]
-      },
-      {
-        "name": "Heavy Fuze Grenade",
-        "direction": "out",
-        "relation": "trader",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 4800,
-            "currency": "Coins"
-          },
-          {
-            "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -50218,6 +51118,24 @@
           {
             "type": "stock",
             "value": "6/6",
+            "is_limited": true
+          }
+        ]
+      },
+      {
+        "name": "Trailblazer",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 4800,
+            "currency": "Coins"
+          },
+          {
+            "type": "stock",
+            "value": "3/3",
             "is_limited": true
           }
         ]
@@ -50253,7 +51171,7 @@
           },
           {
             "type": "stock",
-            "value": "6/6",
+            "value": "3/3",
             "is_limited": true
           }
         ]
@@ -50361,7 +51279,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -50379,25 +51297,7 @@
           },
           {
             "type": "stock",
-            "value": "3/3",
-            "is_limited": true
-          }
-        ]
-      },
-      {
-        "name": "Trailblazer",
-        "direction": "out",
-        "relation": "trader",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 4800,
-            "currency": "Coins"
-          },
-          {
-            "type": "stock",
-            "value": "3/3",
+            "value": "6/6",
             "is_limited": true
           }
         ]
@@ -50409,10 +51309,6 @@
     "node_type": "trader",
     "wiki_url": "https://arcraiders.wiki/wiki/Lance",
     "source_url": "https://arcraiders.wiki/w/index.php?title=Lance&action=edit",
-    "image_urls": {
-      "thumb": "https://arcraiders.wiki/w/images/thumb/4/49/Trader_Lance.png/100px-Trader_Lance.png.webp",
-      "original": "https://arcraiders.wiki/w/images/thumb/4/49/Trader_Lance.png/150px-Trader_Lance.png.webp"
-    },
     "edges": [
       {
         "name": "Combat Mk. 1",
@@ -50506,6 +51402,19 @@
         ]
       },
       {
+        "name": "Defibrillator",
+        "direction": "out",
+        "relation": "trader",
+        "quantity": 1,
+        "dependency": [
+          {
+            "type": "price",
+            "amount": 3000,
+            "currency": "Coins"
+          }
+        ]
+      },
+      {
         "name": "Shield Recharger",
         "direction": "out",
         "relation": "trader",
@@ -50545,19 +51454,6 @@
         ]
       },
       {
-        "name": "Defibrillator",
-        "direction": "out",
-        "relation": "trader",
-        "quantity": 1,
-        "dependency": [
-          {
-            "type": "price",
-            "amount": 3000,
-            "currency": "Coins"
-          }
-        ]
-      },
-      {
         "name": "Combat Mk. 2",
         "direction": "out",
         "relation": "trader",
@@ -50576,7 +51472,7 @@
         ]
       },
       {
-        "name": "Tactical Mk. 2",
+        "name": "Looting Mk. 2",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -50594,7 +51490,7 @@
         ]
       },
       {
-        "name": "Looting Mk. 2",
+        "name": "Tactical Mk. 2",
         "direction": "out",
         "relation": "trader",
         "quantity": 1,
@@ -50696,7 +51592,7 @@
           },
           {
             "type": "stock",
-            "value": "5/5",
+            "value": "10/10",
             "is_limited": true
           }
         ]

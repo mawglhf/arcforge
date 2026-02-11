@@ -22136,5 +22136,590 @@
       ],
       "salvaging": []
     }
+  },
+  {
+    "name": "Snowball",
+    "wiki_url": "https://arcraiders.wiki/wiki/Snowball",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Snowball&action=edit",
+    "infobox": {
+      "image": "Snowball.png",
+      "name": "Snowball",
+      "rarity": "Common",
+      "quote": "A compact snowball fashioned out of the most malleable and aerodynamic snow.",
+      "type": "Misc",
+      "location": "Nature",
+      "weight": 0.2,
+      "sellprice": 10,
+      "stacksize": 5,
+      "damage": 1.0
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/04/Snowball.png/348px-Snowball.png.webp"
+    }
+  },
+  {
+    "name": "Acoustic Guitar",
+    "wiki_url": "https://arcraiders.wiki/wiki/Acoustic_Guitar",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Acoustic_Guitar&action=edit",
+    "infobox": {
+      "image": "Acoustic Guitar.png",
+      "name": "Acoustic Guitar",
+      "rarity": "Legendary",
+      "quote": "A playable acoustic guitar used to attract ARC's attention, and impress other Raiders.",
+      "type": "Quick Use-Gadget",
+      "location": null,
+      "weight": 1.0,
+      "sellprice": 7000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/50/Acoustic_Guitar.png/348px-Acoustic_Guitar.png.webp"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 6,
+              "item": "Wires"
+            },
+            {
+              "quantity": 4,
+              "item": "Metal Parts"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 3,
+              "item": "Wires"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Ancient Fort Security Code",
+    "wiki_url": "https://arcraiders.wiki/wiki/Ancient_Fort_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Ancient_Fort_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Ancient Fort Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    }
+  },
+  {
+    "name": "Pilgrim's Peak Security Code",
+    "wiki_url": "https://arcraiders.wiki/wiki/Pilgrim%27s_Peak_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Pilgrim%27s_Peak_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Pilgrim's Peak Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    }
+  },
+  {
+    "name": "Raider's Refuge Security Code",
+    "wiki_url": "https://arcraiders.wiki/wiki/Raider%27s_Refuge_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Raider%27s_Refuge_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Raider's Refuge Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    }
+  },
+  {
+    "name": "Reinforced Reception Security Code",
+    "wiki_url": "https://arcraiders.wiki/wiki/Reinforced_Reception_Security_Code",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Reinforced_Reception_Security_Code&action=edit",
+    "infobox": {
+      "image": "Security Code.png",
+      "name": "Reinforced Reception Security Code",
+      "rarity": "Common",
+      "quote": "Temporary security code to unlock the main gate.",
+      "type": "Key",
+      "weight": 0.25,
+      "sellprice": 0,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/1/1d/Security_Code.png/348px-Security_Code.png.webp"
+    }
+  },
+  {
+    "name": "Fossilized Lightning",
+    "wiki_url": "https://arcraiders.wiki/wiki/Fossilized_Lightning",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Fossilized_Lightning&action=edit",
+    "infobox": {
+      "image": "Fossilized Lightning.png",
+      "name": "Fossilized Lightning",
+      "rarity": "Epic",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Nature",
+      "location": "Nature",
+      "weight": 0.25,
+      "sellprice": 4000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/8/81/Fossilized_Lightning.png/348px-Fossilized_Lightning.png.webp"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 3,
+              "item": "Explosive Compound"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Explosive Compound"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Burnt-Out Candles",
+    "wiki_url": "https://arcraiders.wiki/wiki/Burnt-Out_Candles",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Burnt-Out_Candles&action=edit",
+    "infobox": {
+      "image": "Burnt-Out Candles.png",
+      "name": "Burnt-Out Candles",
+      "rarity": "Common",
+      "quote": "After the grid fell candles became the preferred source of light for many.",
+      "type": "Trinket",
+      "location": "ResidentialOld World",
+      "weight": 0.2,
+      "sellprice": 640,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "big"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0a/Burnt-Out_Candles.png/348px-Burnt-Out_Candles.png.webp"
+    }
+  },
+  {
+    "name": "Tropical Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Tropical_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Tropical_Duck&action=edit",
+    "infobox": {
+      "image": "Tropical Duck.png",
+      "name": "Tropical Duck",
+      "rarity": "Uncommon",
+      "quote": "It quietly dreams of taking to the skies with its brethren.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/c/cc/Tropical_Duck.png"
+    }
+  },
+  {
+    "name": "Gentle Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Gentle_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Gentle_Duck&action=edit",
+    "infobox": {
+      "image": "Gentle Duck.png",
+      "name": "Gentle Duck",
+      "rarity": "Uncommon",
+      "quote": "Udderly adorable.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/c/c4/Gentle_Duck.png"
+    }
+  },
+  {
+    "name": "Flashy Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Flashy_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Flashy_Duck&action=edit",
+    "infobox": {
+      "image": "Flashy Duck.png",
+      "name": "Flashy Duck",
+      "rarity": "Rare",
+      "quote": "Lovingly hand-painted by someone of great talent—clearly. Any guesses who?",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 3000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/f/f1/Flashy_Duck.png"
+    }
+  },
+  {
+    "name": "Familiar Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Familiar_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Familiar_Duck&action=edit",
+    "infobox": {
+      "image": "Familiar Duck.png",
+      "name": "Familiar Duck",
+      "rarity": "Epic",
+      "quote": "Unlike the real one, this one fits in your pack.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 7000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/4/4f/Familiar_Duck.png"
+    }
+  },
+  {
+    "name": "Doodly Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Doodly_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Doodly_Duck&action=edit",
+    "infobox": {
+      "image": "Doodly Duck.png",
+      "name": "Doodly Duck",
+      "rarity": "Rare",
+      "quote": "Everything is a canvas to a creative child.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 3000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/9/91/Doodly_Duck.png"
+    }
+  },
+  {
+    "name": "Alien Duck",
+    "wiki_url": "https://arcraiders.wiki/wiki/Alien_Duck",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Alien_Duck&action=edit",
+    "infobox": {
+      "image": "Alien Duck.png",
+      "name": "Alien Duck",
+      "rarity": "Uncommon",
+      "quote": "A long, long way from home.",
+      "warning": "Can be thrown to create noise.",
+      "type": "Trinket",
+      "weight": 0.3,
+      "sellprice": 1000,
+      "stacksize": 15,
+      "raiderden": "yes",
+      "raiderdentype": "small"
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/3/3e/Alien_Duck.png"
+    }
+  },
+  {
+    "name": "Shredder Gyro",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shredder_Gyro",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shredder_Gyro&action=edit",
+    "infobox": {
+      "image": "Shredder Gyro.png",
+      "name": "Shredder Gyro",
+      "rarity": "Rare",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "ARC",
+      "weight": 1.0,
+      "sellprice": 3000,
+      "stacksize": 3,
+      "special_types": ["expedition_2", "safe_to_recycle"],
+      "expedition_2_parts": [
+        {
+          "part": 3,
+          "quantity": 10
+        }
+      ]
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/9/96/Shredder_Gyro.png/348px-Shredder_Gyro.png.webp"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 3,
+              "item": "Mechanical Components"
+            },
+            {
+              "quantity": 3,
+              "item": "ARC Alloy"
+            }
+          ],
+          "input": "Shredder Gyro"
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Mechanical Components"
+            }
+          ],
+          "input": "Shredder Gyro"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Shaker",
+    "wiki_url": "https://arcraiders.wiki/wiki/Shaker",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Shaker&action=edit",
+    "infobox": {
+      "image": "Shaker.png",
+      "name": "Shaker",
+      "rarity": "Uncommon",
+      "quote": "A rhythmic instrument used to attract ARC's attention, and impress other Raiders.",
+      "type": "Quick Use-Gadget",
+      "location": "Residential",
+      "weight": 0.2,
+      "sellprice": 1000,
+      "stacksize": 1
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/2/22/Shaker.png"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 10,
+              "item": "Plastic Parts"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 4,
+              "item": "Plastic Parts"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Damaged Leaper Pulse Unit",
+    "wiki_url": "https://arcraiders.wiki/wiki/Damaged_Leaper_Pulse_Unit",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Damaged_Leaper_Pulse_Unit&action=edit",
+    "infobox": {
+      "image": "Damaged Leaper Pulse Unit.png",
+      "name": "Damaged Leaper Pulse Unit",
+      "rarity": "Common",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "ARC",
+      "weight": 0.3,
+      "sellprice": 2000,
+      "stacksize": 3
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/0/0a/Damaged_Leaper_Pulse_Unit.png/348px-Damaged_Leaper_Pulse_Unit.png.webp"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 3,
+              "item": "ARC Alloy"
+            }
+          ],
+          "input": "Damaged Leaper Pulse Unit"
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "ARC Alloy"
+            }
+          ],
+          "input": "Damaged Leaper Pulse Unit"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Flow Controller",
+    "wiki_url": "https://arcraiders.wiki/wiki/Flow_Controller",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Flow_Controller&action=edit",
+    "infobox": {
+      "image": "Flow Controller.png",
+      "name": "Flow Controller",
+      "rarity": "Rare",
+      "quote": "Can be recycled into crafting materials.",
+      "type": "Recyclable",
+      "location": "Exodus",
+      "weight": 1.5,
+      "sellprice": 3000,
+      "stacksize": 3
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/b/b6/Flow_Controller.png/348px-Flow_Controller.png.webp"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 1,
+              "item": "Advanced Mechanical Components"
+            },
+            {
+              "quantity": 1,
+              "item": "Sensors"
+            }
+          ],
+          "input": "Flow Controller"
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Mechanical Components"
+            }
+          ],
+          "input": "Flow Controller"
+        }
+      ]
+    }
+  },
+  {
+    "name": "Integrated Defibrillator",
+    "wiki_url": "https://arcraiders.wiki/wiki/Integrated_Defibrillator",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Integrated_Defibrillator&action=edit",
+    "infobox": {
+      "image": "Defibrillator.png",
+      "name": "Integrated Defibrillator",
+      "rarity": "Rare",
+      "quote": "Defibrillator Recharger on a fixed cooldown. Can be used like a normal Defibrillator, but cannot be dropped or removed from its slot.",
+      "warning": "Locked to equipped augmentCooldown: 240s",
+      "type": "Quick Use-Regen",
+      "usetime": "1.5s",
+      "healing": 50.0,
+      "weight": 0.0,
+      "stacksize": 1,
+      "sellprice": 0
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/5/5f/Defibrillator.png/348px-Defibrillator.png.webp"
+    }
+  },
+  {
+    "name": "Looting Mk. 3 (Safekeeper)",
+    "wiki_url": "https://arcraiders.wiki/wiki/Looting_Mk._3_%28Safekeeper%29",
+    "source_url": "https://arcraiders.wiki/w/index.php?title=Looting_Mk._3_%28Safekeeper%29&action=edit",
+    "infobox": {
+      "image": "Looting Mk. 3 (Safekeeper).png",
+      "name": "Looting Mk. 3 (Safekeeper)",
+      "rarity": "Epic",
+      "warning": "A Safe Pocket that allows any items to be stored.",
+      "quote": "A looting augment that trades weight and utility for increased looting potential.",
+      "shield_compatibility": "3",
+      "slot_weapon": "2",
+      "slot_backpack": "18",
+      "slot_quickuse": "4",
+      "slot_safepocket": "1",
+      "slot_healing": "0",
+      "slot_grenade": "0",
+      "slot_trinket": "2",
+      "slot_utility": "0",
+      "weight": 5.0,
+      "wlimit": 65.0,
+      "sellprice": 5000
+    },
+    "image_urls": {
+      "thumb": "https://arcraiders.wiki/w/images/thumb/c/c6/Looting_Mk._3_%28Safekeeper%29.png/348px-Looting_Mk._3_%28Safekeeper%29.png.webp",
+      "file_page": "https://arcraiders.wiki/wiki/File:Looting_Mk._3_(Safekeeper).png"
+    },
+    "recycling": {
+      "recycling": [
+        {
+          "materials": [
+            {
+              "quantity": 1,
+              "item": "Advanced Electrical Components"
+            },
+            {
+              "quantity": 1,
+              "item": "Processor"
+            }
+          ]
+        }
+      ],
+      "salvaging": [
+        {
+          "materials": [
+            {
+              "quantity": 2,
+              "item": "Electrical Components"
+            }
+          ]
+        }
+      ]
+    }
   }
 ]

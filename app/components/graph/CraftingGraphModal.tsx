@@ -44,6 +44,7 @@ export default function CraftingGraphModal({
   const containerRef = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef<string | null>(null);
   const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const animationTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [showCopied, setShowCopied] = useState(false);
@@ -121,6 +122,16 @@ export default function CraftingGraphModal({
       return;
     }
 
+    // Destroy any existing Cytoscape instance first
+    if (cyRef.current) {
+      try {
+        cyRef.current.destroy();
+      } catch {
+        // Ignore errors during cleanup
+      }
+      cyRef.current = null;
+    }
+
     // Get current item data
     const currentItem = itemsLookup.get(itemName);
     if (!currentItem) {
@@ -136,10 +147,22 @@ export default function CraftingGraphModal({
       translateRelation,
     );
 
+    // Validate elements before initializing Cytoscape
+    if (!elements || elements.length === 0) {
+      console.warn("No elements to display in graph");
+      return;
+    }
+
+    // Ensure container is still available after async operations
+    const container = containerRef.current;
+    if (!container) {
+      return;
+    }
+
     let cy;
     try {
       cy = cytoscape({
-        container: containerRef.current,
+        container: container,
         elements: elements as cytoscape.ElementDefinition[],
         style: cytoscapeStyles as unknown as cytoscape.StylesheetCSS[],
         layout: {
@@ -158,6 +181,10 @@ export default function CraftingGraphModal({
       });
     } catch (error) {
       console.error("Error initializing Cytoscape:", error);
+      // Clean up container to prevent stale state
+      if (container) {
+        container.innerHTML = "";
+      }
       return;
     }
 
@@ -178,46 +205,55 @@ export default function CraftingGraphModal({
 
     window.addEventListener("resize", handleResize);
 
+    // Clear any previous animation timeout
+    if (animationTimeoutRef.current) {
+      clearTimeout(animationTimeoutRef.current);
+    }
+
     // Force a resize and fit after a short delay
-    setTimeout(() => {
+    animationTimeoutRef.current = setTimeout(() => {
       if (cyRef.current) {
-        cyRef.current.resize();
-        cyRef.current.fit(undefined, 150);
+        try {
+          cyRef.current.resize();
+          cyRef.current.fit(undefined, 150);
 
-        const shouldAnimate = hasAnimated.current !== itemName;
+          const shouldAnimate = hasAnimated.current !== itemName;
 
-        if (shouldAnimate) {
-          hasAnimated.current = itemName;
+          if (shouldAnimate) {
+            hasAnimated.current = itemName;
 
-          const centerNode = cyRef.current.$('[type="center"]');
-          const currentZoom = cyRef.current.zoom();
+            const centerNode = cyRef.current.$('[type="center"]');
+            const currentZoom = cyRef.current.zoom();
 
-          const containerHeight = cyRef.current.height();
-          const centerNodeHeight = 250;
-          const targetNodeScreenHeight = containerHeight * 0.22;
-          const targetZoom = targetNodeScreenHeight / centerNodeHeight;
+            const containerHeight = cyRef.current.height();
+            const centerNodeHeight = 250;
+            const targetNodeScreenHeight = containerHeight * 0.22;
+            const targetZoom = targetNodeScreenHeight / centerNodeHeight;
 
-          if (currentZoom < targetZoom * 0.8) {
-            const finalZoom = Math.max(currentZoom * 1.5, targetZoom);
+            if (currentZoom < targetZoom * 0.8) {
+              const finalZoom = Math.max(currentZoom * 1.5, targetZoom);
 
-            cyRef.current.animate(
-              {
-                zoom: finalZoom,
-                center: { eles: centerNode },
-              },
-              { duration: 1300, easing: "ease-out-cubic" },
-            );
-          } else {
-            const finalZoom = currentZoom * 0.85;
+              cyRef.current.animate(
+                {
+                  zoom: finalZoom,
+                  center: { eles: centerNode },
+                },
+                { duration: 1300, easing: "ease-out-cubic" },
+              );
+            } else {
+              const finalZoom = currentZoom * 0.85;
 
-            cyRef.current.animate(
-              {
-                zoom: finalZoom,
-                center: { eles: centerNode },
-              },
-              { duration: 1300, easing: "ease-out-cubic" },
-            );
+              cyRef.current.animate(
+                {
+                  zoom: finalZoom,
+                  center: { eles: centerNode },
+                },
+                { duration: 1300, easing: "ease-out-cubic" },
+              );
+            }
           }
+        } catch {
+          // Ignore errors if cytoscape instance was destroyed
         }
       }
     }, 100);
@@ -237,9 +273,17 @@ export default function CraftingGraphModal({
       if (resizeTimeoutRef.current) {
         clearTimeout(resizeTimeoutRef.current);
       }
+      if (animationTimeoutRef.current) {
+        clearTimeout(animationTimeoutRef.current);
+      }
 
       if (cyRef.current) {
-        cyRef.current.destroy();
+        try {
+          cyRef.current.destroy();
+        } catch {
+          // Ignore errors during cleanup
+        }
+        cyRef.current = null;
       }
     };
   }, [

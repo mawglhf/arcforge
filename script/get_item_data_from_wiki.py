@@ -896,6 +896,29 @@ if __name__ == "__main__":
     ITEMS_TO_UPDATE = [
         # Add item names here to update them
         # "Shotgun Ammo",
+        "Buried City Residential Master Key"
+        #"Tactical Mk. 3 (Revival)",
+        #"Comet Igniter",
+        #"Firefly Burner",
+        #"Deadline",
+        #"Trailblazer",
+        #"Wolfpack",
+        #"Vita Spray",
+        #"Showstopper",
+        #"Bastion Cell",
+        #"Bombardier Cell",
+        #"Pop Trigger",
+        #"Spotter Relay",
+        #"Shredder Gyro",
+        #"Rocketeer Driver",
+        #"Leaper Pulse Unit",
+        #"Matriarch Reactor",
+        #"Sentinel Firing Core",
+        #"Snitch Scanner",
+        #"Surveyor Vault",
+        #"Tick Pod",
+        #"Wasp Driver",
+        #"Hornet Driver"
     ]
     
     # Choose mode:

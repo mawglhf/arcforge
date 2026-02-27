@@ -32,7 +32,7 @@ Broken Handheld Radio
 Broken Taser
 Buried City Hospital Key
 Buried City JKV Employee Access Card
-Buried City Residential Mastery Key
+Buried City Residential Master Key
 Buried City Town Hall Key
 Burned ARC Circuitry
 Camera Lens
@@ -361,3 +361,6 @@ Damaged Leaper Pulse Unit
 Flow Controller
 Integrated Defibrillator
 Looting Mk. 3 (Safekeeper)
+Tactical Mk. 3 (Revival)
+Comet Igniter
+Firefly Burner
